@@ -1,7 +1,8 @@
-import { Box, Title, Text, Button } from '@mantine/core';
-import { Link } from 'react-router-dom';
+import { Box, Text, Title } from '@mantine/core';
 import { useHomeStyles } from './useHomeStyles';
 import { PageHelmet, useGlobalStyles } from '../Global';
+// import { Link } from 'react-router-dom';
+import { SkullLogo } from '../SkullLogo/SkullLogo';
 
 export function Home() {
   const { classes, cx } = useHomeStyles();
@@ -10,23 +11,36 @@ export function Home() {
     <Box id="home">
       <PageHelmet />
       <Box className={cx(globalClasses.page, classes.homeOuter)}>
-        <Title order={1}>HOME PAGE WEEEEE</Title>
-        <Text component="p">This is the home page of the application.</Text>
+        <SkullLogo size={'180px'} />
+        <Title className={globalClasses.wreckText} order={1}>
+          WRECK
+          <Text className={globalClasses.shopText} component="span">
+            SHOP
+          </Text>
+        </Title>
+        {/* <Box>
+          <Button
+            variant="filled"
+            color="darkblue"
+            radius="md"
+            size="lg"
+            component={Link}
+            to="/about"
+          >
+            About
+          </Button>
 
-        <Button variant="outline" color="yellow" radius="md" component={Link} to="/about" mt="md">
-          About Wreck Shop
-        </Button>
-        <Button
-          variant="outline"
-          color="red"
-          radius="md"
-          component={Link}
-          to="/contact"
-          mt="md"
-          ml="md"
-        >
-          Contact Us
-        </Button>
+          <Button
+            variant="filled"
+            color="darkblue"
+            radius="md"
+            size="lg"
+            component={Link}
+            to="/contact"
+          >
+            Contact
+          </Button>
+        </Box> */}
       </Box>
     </Box>
   );

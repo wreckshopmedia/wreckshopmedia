@@ -1,8 +1,9 @@
 import { createStyles } from '@mantine/styles';
+  import { colors } from '../theme/theme';
 
 export const useContactStyles = createStyles(() => ({
   contactOuter: {
-    background: '#D6FFB7',
-    color: '#000',
+    background: colors.blue,
+    color: colors.offWhite,
   },
 }));

@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { theme } from './theme/theme';
 import './App.css';
 import { HelmetProvider } from 'react-helmet-async';
 import { MantineProvider } from '@mantine/styles';
@@ -10,7 +11,7 @@ import { Contact } from './Contact/Contact';
 function App() {
   return (
     <HelmetProvider>
-      <MantineProvider withGlobalStyles withNormalizeCSS>
+      <MantineProvider theme={theme} withGlobalStyles withNormalizeCSS>
         <Router>
           <Routes>
             <Route path="/" element={<Home />} />
