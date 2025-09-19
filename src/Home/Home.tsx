@@ -15,9 +15,9 @@ export function Home() {
         <Title className={globalClasses.wreckText} order={1}>
           WRECK
           <Text className={globalClasses.shopText} component="span">
-            SHOP
-          </Text>
+            SHOP</Text>
         </Title>
+        <Text component="p">We're working on it.</Text>
         {/* <Box>
           <Button
             variant="filled"

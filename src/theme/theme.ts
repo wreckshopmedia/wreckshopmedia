@@ -38,6 +38,7 @@ export const theme: MantineThemeOverride = {
         height: '100vh',
         width: '100%',
         overflow: 'hidden', // idea page always fits viewport
+        
         '& #root': {
           height: '100%',
           width: '100%',

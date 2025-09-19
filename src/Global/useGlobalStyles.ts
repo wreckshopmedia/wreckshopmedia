@@ -22,11 +22,13 @@ export const useGlobalStyles = createStyles(() => ({
   },
 
   wreckText: {
-    color: colors.eerieBlack,
-    fontSize: 'clamp(2rem, 8cqi, 3.5rem)',
-    letterSpacing: '0.125em',
-    marginBlock: '0.125em',
-    fontFamily: '"Dongle", sans-serif',
+    color: colors.yellow,
+    fontSize: 'clamp(2rem, 8cqi, 3rem)',
+    letterSpacing: '0.175em',
+    marginTop: '0.25em',
+    marginBottom: '0.125em',
+    fontFamily: '"Winky Sans", sans-serif',
+    lineHeight: '1em',
   },
 
   shopText: {
@@ -41,6 +43,6 @@ export const useGlobalStyles = createStyles(() => ({
     textTransform: 'inherit',
     fontStyle: 'inherit',
     letterSpacing: 'inherit',
-    color: colors.offWhite,
+    color: colors.blue,
   },
 }));
