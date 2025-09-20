@@ -15,32 +15,9 @@ export function Home() {
         <Title className={globalClasses.wreckText} order={1}>
           WRECK
           <Text className={globalClasses.shopText} component="span">
-            SHOP</Text>
+            SHOP
+          </Text>
         </Title>
-        <Text component="p">We're working on it.</Text>
-        {/* <Box>
-          <Button
-            variant="filled"
-            color="darkblue"
-            radius="md"
-            size="lg"
-            component={Link}
-            to="/about"
-          >
-            About
-          </Button>
-
-          <Button
-            variant="filled"
-            color="darkblue"
-            radius="md"
-            size="lg"
-            component={Link}
-            to="/contact"
-          >
-            Contact
-          </Button>
-        </Box> */}
       </Box>
     </Box>
   );
