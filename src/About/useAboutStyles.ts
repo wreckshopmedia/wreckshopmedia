@@ -1,9 +1,8 @@
 import { createStyles } from '@mantine/styles';
-import { colors } from '../theme/theme';
 
-export const useAboutStyles = createStyles(() => ({
+export const useAboutStyles = createStyles((theme) => ({
   aboutOuter: {
-    background: colors.yellow,
-    color: colors.eerieBlack,
+    background: theme.colors.yellow,
+    color: theme.colors.eerieBlack,
   },
 }));

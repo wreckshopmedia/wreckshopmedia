@@ -1,14 +1,12 @@
 import { createStyles } from '@mantine/core';
-import { colors } from '../theme/theme';
 
-export const useGlobalStyles = createStyles(() => ({
+export const useGlobalStyles = createStyles((theme) => ({
   // ! FIX - THIS IS JUST PLACEHOLDER
   '@global': {
     body: {
       margin: 0,
       padding: 0,
       boxSizing: 'border-box',
-      // fontFamily: 'Open Sans, sans-serif',
     },
   },
 
@@ -22,13 +20,16 @@ export const useGlobalStyles = createStyles(() => ({
   },
 
   wreckText: {
-    color: colors.yellow,
-    fontSize: 'clamp(2rem, 8cqi, 3rem)',
+    color: theme.colors.yellow,
+    fontSize: '2.75rem',
     letterSpacing: '0.175em',
     marginTop: '0.25em',
     marginBottom: '0.125em',
     fontFamily: '"Winky Sans", sans-serif',
     lineHeight: '1em',
+    [theme.other.mq.mobile]: {
+      fontSize: '2.25rem',
+    },
   },
 
   shopText: {
@@ -43,6 +44,6 @@ export const useGlobalStyles = createStyles(() => ({
     textTransform: 'inherit',
     fontStyle: 'inherit',
     letterSpacing: 'inherit',
-    color: colors.blue,
+    color: theme.colors.blue,
   },
 }));
