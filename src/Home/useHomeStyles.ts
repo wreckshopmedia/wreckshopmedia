@@ -8,18 +8,27 @@ export const useHomeStyles = createStyles((theme) => ({
     background: theme.colors.peach,
     color: theme.colors.eerieBlack,
 
+    svg: {
+      [theme.other.mq.mobile]: {
+        width: '140px',
+      },
+    },
+
     p: {
       fontFamily: '"Zain", sans-serif',
-      fontSize: 'clamp(1.25rem, 10cqi, 1.75rem)',
-      fontWeight: 300,
+      fontSize: '1.5rem',
+      fontWeight: 400,
       letterSpacing: '0.05em',
       marginBlock: 0,
       lineHeight: '1em',
       color: theme.colors.offWhite,
     },
 
-    [theme.other.mq.customMax(800)]: {
-      rotate: '90deg',
+    [theme.other.mq.mobile]: {
+      p: {
+        fontSize: '1.25rem',
+      },
+      
     },
   },
 }));
