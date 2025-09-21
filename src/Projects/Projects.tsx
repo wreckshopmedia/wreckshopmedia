@@ -10,8 +10,8 @@ export function Projects() {
     <Box id="projects">
       <PageHelmet title="Projects" description="Learn more projects our company" />
       <Box className={cx(globalClasses.page, classes.projectsOuter)}>
-        <Title order={1}>SERVICES PAGE STUFF</Title>
-        <Text component="p">Huzzah, here is the stuff we does do things ya</Text>
+        <Title order={1}>PROJECTS HERE yaaaaaaaaa</Title>
+        <Text component="p">Side by side view porjects that ir neato stuff</Text>
         <Button variant="outline" color="darkblue" radius="md" component={Link} to="/" mt="md">
           Back Home
         </Button>

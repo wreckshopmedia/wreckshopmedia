@@ -2,33 +2,49 @@ import { createStyles } from '@mantine/styles';
 
 export const useHomeStyles = createStyles((theme) => ({
   homeOuter: {
-    width: '100vw',
-    height: '100vh',
+    height: '100%',
     overflow: 'hidden',
-    background: theme.colors.peach,
-    color: theme.colors.eerieBlack,
+  },
 
-    svg: {
-      [theme.other.mq.mobile]: {
-        width: '140px',
-      },
-    },
+  homeCardsWrapper: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 'min(1.25rem, 4cqi)',
+    flexWrap: 'wrap',
+    width: '100%',
+    height: '100%',
+    paddingBlock: 'min(2em, 1em + 2cqi)',
+  },
 
-    p: {
-      fontFamily: '"Zain", sans-serif',
+  homeCard: {
+    background: `${theme.colors.eerieBlack}10`,
+    width: '20%',
+    flexBasis: '20%',
+    minWidth: '170px',
+    aspectRatio: '4 / 5',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    justifyContent: 'center',
+    gap: 'min(1em, 2cqi)',
+
+    h3: {
+      fontFamily: '"Winky Sans", sans-serif',
+      fontWeight: 600,
       fontSize: '1.5rem',
-      fontWeight: 400,
-      letterSpacing: '0.05em',
       marginBlock: 0,
       lineHeight: '1em',
       color: theme.colors.offWhite,
     },
-
-    [theme.other.mq.mobile]: {
-      p: {
-        fontSize: '1.25rem',
-      },
-      
+    h4: {
+      fontFamily: '"Zain", sans-serif',
+      fontWeight: 400,
+      fontSize: '1.25rem',
+      marginBlock: 0,
+      lineHeight: '1em',
+      color: theme.colors.offWhite,
     },
   },
 }));
