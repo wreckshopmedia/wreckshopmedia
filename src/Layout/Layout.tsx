@@ -8,15 +8,16 @@ export function Layout() {
   const { classes } = useLayoutStyles();
 
   const location = useLocation();
-  const isIntro = location.pathname === '/';
+  const showHeaderMenu = location.pathname === '/' || location.pathname === '/home';
 
   return (
     <Box className={classes.layout} id="layout-outer">
-      {!isIntro && <HeaderMenu />}
+      {!showHeaderMenu && <HeaderMenu />}
       <Box component="main">
         <Outlet />
       </Box>
-      {!isIntro && <Footer />}
+      {/* maybe show Footer always??? */}
+      {!showHeaderMenu && <Footer />}
     </Box>
   );
 }

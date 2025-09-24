@@ -1,22 +1,17 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useColorScheme } from '@mantine/hooks';
 import { theme } from './theme/theme';
 import './App.css';
 import { HelmetProvider } from 'react-helmet-async';
 import { MantineProvider } from '@mantine/styles';
-// import { Layout } from './Layout/Layout';
-// import { Intro } from './Intro/Intro';
-// import { Home } from './Home/Home';
-// import { About } from './About/About';
-// import { Services } from './Services/Services';
-// import { Projects } from './Projects/Projects';
-// import { Contact } from './Contact/Contact';
-
-import { Layout, Intro, Home, About, Services, Projects, Contact } from '.';  
+import { Layout, Intro, Home, About, Services, Projects, Contact } from '.';
 
 function App() {
+  const colorScheme = useColorScheme();
+
   return (
     <HelmetProvider>
-      <MantineProvider theme={theme} withGlobalStyles withNormalizeCSS>
+      <MantineProvider theme={{ ...theme, colorScheme }} withGlobalStyles withNormalizeCSS>
         <Router>
           <Routes>
             <Route element={<Layout />}>

@@ -8,6 +8,28 @@ export const LG = 1200;
 export const XL = 1400;
 
 export const theme: MantineThemeOverride = {
+  globalStyles: (theme) => ({
+    ':root': {
+      scrollBehavior: 'smooth',
+      colorScheme: 'light dark',
+      '--zain': '"Zain", sans-serif',
+      '--winky-sans': '"Winky Sans", sans-serif',
+    },
+
+    body: {
+      margin: 0,
+      padding: 0,
+      boxSizing: 'border-box',
+      background: theme.colors.peach,
+      color: theme.colorScheme === 'dark' ? theme.colors.eerieBlack : theme.colors.offWhite,
+
+      '& #root': {
+        height: '100%',
+        width: '100%',
+      },
+    },
+  }),
+
   colors: {
     eerieBlack: ['#222725'],
     yellow: ['#F5E663'],

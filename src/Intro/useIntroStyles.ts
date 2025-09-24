@@ -5,7 +5,7 @@ export const useIntroStyles = createStyles((theme) => ({
     
     
     overflow: 'hidden',
-    color: theme.colors.eerieBlack,
+    
 
     svg: {
       [theme.other.mq.mobile]: {

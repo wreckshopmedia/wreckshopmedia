@@ -1,14 +1,7 @@
 import { createStyles } from '@mantine/core';
 
 export const useGlobalStyles = createStyles((theme) => ({
-  // ! FIX - THIS IS JUST PLACEHOLDER
-  '@global': {
-    body: {
-      margin: 0,
-      padding: 0,
-      boxSizing: 'border-box',
-    },
-  },
+  
 
   page: {
     width: '100%',

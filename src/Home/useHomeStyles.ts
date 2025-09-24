@@ -20,15 +20,24 @@ export const useHomeStyles = createStyles((theme) => ({
 
   homeCard: {
     background: `${theme.colors.eerieBlack}10`,
+    border: 'none',
     width: '20%',
     flexBasis: '20%',
-    minWidth: '170px',
+    minWidth: '180px',
     aspectRatio: '4 / 5',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-start',
     justifyContent: 'center',
     gap: 'min(1em, 2cqi)',
+    cursor: 'pointer',
+    transformOrigin: 'center',
+    transition: 'transform 150ms ease, box-shadow 150ms ease, background 150ms ease',
+    '&:hover': {
+      transform: 'scale(1.05)',
+      boxShadow: theme.shadows.xl,
+      
+    },
 
     h3: {
       fontFamily: '"Winky Sans", sans-serif',
@@ -36,7 +45,7 @@ export const useHomeStyles = createStyles((theme) => ({
       fontSize: '1.5rem',
       marginBlock: 0,
       lineHeight: '1em',
-      color: theme.colors.offWhite,
+      
     },
     h4: {
       fontFamily: '"Zain", sans-serif',
@@ -44,7 +53,7 @@ export const useHomeStyles = createStyles((theme) => ({
       fontSize: '1.25rem',
       marginBlock: 0,
       lineHeight: '1em',
-      color: theme.colors.offWhite,
+      
     },
   },
 }));
