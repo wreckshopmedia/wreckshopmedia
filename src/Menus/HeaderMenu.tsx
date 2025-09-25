@@ -1,32 +1,40 @@
 import { Header, Box } from '@mantine/core';
 import { useHeaderMenuStyles } from '.';
 import { Link } from 'react-router-dom';
-import { SkullLogo } from '../SkullLogo/SkullLogo';
+import { SkullLogo } from '../SkullLogo';
+import { HEADER_HEIGHT } from '../theme/theme';
+import { useIsAtTop } from '../hooks';
 
-export function HeaderMenu() {
-  const { classes } = useHeaderMenuStyles();
+export interface HeaderMenuProps {
+  show?: boolean;
+}
+
+export function HeaderMenu(props: HeaderMenuProps) {
+  const { show = true } = props;
+  const isAtTop = useIsAtTop(60);
+  const { classes } = useHeaderMenuStyles({ isAtTop, show });
+
   return (
-    <Header pos="fixed" id="header" height="80px" className={classes.headerOuter}>
+    <Header pos="fixed" id="header" height={HEADER_HEIGHT} className={classes.headerOuter}>
       <Box h="100%" className={classes.headerMenuInner} id="header-menu">
-        <Link to="/">
-          <SkullLogo size="50px" />
-        </Link>
-        <Box h="100%" component="nav" className={classes.headerMenuOptionsWrapper}>
-          <Link className={classes.menuItem} to="/home">
-            HOME
+        <Box className={classes.headerMenu} m={0} p={0}>
+          <Link id="home-link" to="/home">
+            <SkullLogo size="50px" />
           </Link>
-          <Link className={classes.menuItem} to="/about">
-            ABOUT
-          </Link>
-          <Link className={classes.menuItem} to="/services">
-            SERVICES
-          </Link>
-          <Link className={classes.menuItem} to="/projects">
-            PROJECTS
-          </Link>
-          <Link className={classes.menuItem} to="/contact">
-            CONTACT
-          </Link>
+          <Box h="100%" component="nav" className={classes.headerMenuOptionsWrapper}>
+            <Link className={classes.menuItem} to="/about" id="about-link">
+              ABOUT
+            </Link>
+            <Link className={classes.menuItem} to="/services" id="services-link">
+              SERVICES
+            </Link>
+            <Link className={classes.menuItem} to="/projects" id="projects-link">
+              PROJECTS
+            </Link>
+            <Link className={classes.menuItem} to="/contact" id="contact-link">
+              CONTACT
+            </Link>
+          </Box>
         </Box>
       </Box>
     </Header>

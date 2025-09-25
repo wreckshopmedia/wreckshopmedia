@@ -6,3 +6,5 @@ export * from './Services';
 export * from './Projects';
 export * from './Contact';
 export * from './Menus';
+export * from './SkullLogo';
+export * from './ColorChecker';

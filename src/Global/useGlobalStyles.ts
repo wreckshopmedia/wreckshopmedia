@@ -19,6 +19,12 @@ export const useGlobalStyles = createStyles((theme) => ({
     '& h4, h5, h6, p, a, span': {
       textWrap: 'pretty',
     },
+
+    p: {
+      fontSize: '1.125rem',
+      lineHeight: '1.3em',
+      
+    },
   },
 
   wreckText: {

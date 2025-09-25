@@ -1,5 +1,4 @@
-import { Box, Title, Text, Button } from '@mantine/core';
-import { Link } from 'react-router-dom';
+import { Box, Title, Text } from '@mantine/core';
 import { useContactStyles } from './useContactStyles';
 import { PageHelmet, useGlobalStyles } from '../Global';
 
@@ -10,31 +9,9 @@ export function Contact() {
     <Box id="contact">
       <PageHelmet title="Contact" description="Get in touch with our team" />
       <Box className={cx(globalClasses.page, classes.contactOuter)}>
-        <Title order={1}>CONTACT BEEFY NEET YAAAAAA</Title>
-        <Text component="p">I just freakin want helmet to work</Text>
-
-        <Button
-          variant="outline"
-          color="darkblue"
-          radius="md"
-          component={Link}
-          to="/"
-          mt="md"
-          ml="md"
-        >
-          Back Home
-        </Button>
-        <Button
-          variant="outline"
-          color="yellow"
-          radius="md"
-          component={Link}
-          to="/about"
-          mt="md"
-          ml="md"
-        >
-          About Wreck Shop
-        </Button>
+        <Title order={2}>NEW PHONE WHO DIS</Title>
+        <Text component="p">Yo lem</Text>
+        
       </Box>
     </Box>
   );

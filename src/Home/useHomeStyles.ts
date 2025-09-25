@@ -20,6 +20,7 @@ export const useHomeStyles = createStyles((theme) => ({
 
   homeCard: {
     background: `${theme.colors.eerieBlack}10`,
+    color: theme.colors.offWhite,
     border: 'none',
     width: '20%',
     flexBasis: '20%',
@@ -36,24 +37,6 @@ export const useHomeStyles = createStyles((theme) => ({
     '&:hover': {
       transform: 'scale(1.05)',
       boxShadow: theme.shadows.xl,
-      
-    },
-
-    h3: {
-      fontFamily: '"Winky Sans", sans-serif',
-      fontWeight: 600,
-      fontSize: '1.5rem',
-      marginBlock: 0,
-      lineHeight: '1em',
-      
-    },
-    h4: {
-      fontFamily: '"Zain", sans-serif',
-      fontWeight: 400,
-      fontSize: '1.25rem',
-      marginBlock: 0,
-      lineHeight: '1em',
-      
     },
   },
 }));

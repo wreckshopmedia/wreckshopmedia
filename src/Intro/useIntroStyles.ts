@@ -23,4 +23,8 @@ export const useIntroStyles = createStyles((theme) => ({
     cursor: 'pointer',
     gap: 'min(0.5rem, 2cqi)',
   },
+
+
+   
+  
 }));

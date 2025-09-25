@@ -1,20 +1,32 @@
 import { createStyles } from '@mantine/core';
 
-export const useHeaderMenuStyles = createStyles((theme) => ({
-  headerOuter: {
-    // the ACTUAL "Header" element
-    background: `${theme.colors.peach}EE`,
-    backdropFilter: 'blur(2px)',
-    border: 'none',
-    boxShadow: '0 4px 20px #00000010',
+interface useHeaderMenuStylesProps {
+  isAtTop: boolean;
+  show?: boolean;
+}
 
+export const useHeaderMenuStyles = createStyles((theme, { isAtTop, show }: useHeaderMenuStylesProps) => ({
+  headerOuter: {
+    background: isAtTop ? 'transparent' : `${theme.colors.peach}DD`,
+    backdropFilter: isAtTop ? 'none' : 'blur(3px)',
+    opacity: show ? 1 : 0,
+    border: 'none',
+    transition: 'box-shadow 200ms ease-out, background 200ms ease-out 100ms, transform 300ms ease-out, opacity 400ms ease-out, backdrop-filter 200ms ease-out',
+    boxShadow: isAtTop ? 'none' : '0 4px 20px #00000016',
+    transform: show ? 'translateY(0)' : 'translateY(-100%)',
   },
 
   headerMenuInner: {
+    paddingInline: theme.other.inlinePadding,
+    marginInline: 'min(60px, 3vw)',
+  },
+
+  headerMenu: {
+    height: '100%',
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-around',
+    justifyContent: 'space-between',
   },
 
   headerMenuOptionsWrapper: {
@@ -22,7 +34,7 @@ export const useHeaderMenuStyles = createStyles((theme) => ({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-around',
-    gap: 'min(2em, 1em + 2cqi)'
+    gap: 'min(2em, 1em + 2cqi)',
   },
 
   menuItem: {

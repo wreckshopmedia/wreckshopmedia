@@ -1,5 +1,5 @@
 import { Box, Text, Paper, Title } from '@mantine/core';
-import { useHomeStyles } from './useHomeStyles';
+import { useHomeStyles } from '.';
 import { PageHelmet, useGlobalStyles } from '../Global';
 import { Link } from 'react-router-dom';
 
@@ -20,8 +20,8 @@ export function Home() {
             radius="lg"
             p="lg"
           >
-            <Title order={3}>About</Title>
-            <Text component="h4">About art, short blurb</Text>
+            <Title order={4}>About</Title>
+            <Text component="p">About art, short blurb</Text>
           </Paper>
           <Paper
             component={Link}
@@ -32,8 +32,8 @@ export function Home() {
             radius="lg"
             p="lg"
           >
-            <Title order={3}>Services</Title>
-            <Text component="h4">Services art, short blurb</Text>
+            <Title order={4}>Services</Title>
+            <Text component="p">Services art, short blurb</Text>
           </Paper>
           <Paper
             component={Link}
@@ -44,8 +44,8 @@ export function Home() {
             radius="lg"
             p="lg"
           >
-            <Title order={3}>Projects</Title>
-            <Text component="h4">Projects art, short blurb</Text>
+            <Title order={4}>Projects</Title>
+            <Text component="p">Projects art, short blurb</Text>
           </Paper>
           <Paper
             component={Link}
@@ -56,8 +56,8 @@ export function Home() {
             radius="lg"
             p="lg"
           >
-            <Title order={3}>Contact</Title>
-            <Text component="h4">Contact art, short blurb</Text>
+            <Title order={4}>Contact</Title>
+            <Text component="p">Contact art, short blurb</Text>
           </Paper>
         </Box>
       </Box>

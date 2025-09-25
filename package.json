@@ -17,6 +17,7 @@
     "@mantine/hooks": "^6.0.22",
     "@mantine/notifications": "^6.0.22",
     "@mantine/styles": "^6.0.22",
+    "chroma-js": "^3.1.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-helmet-async": "^2.0.5",
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.29.0",
+    "@types/chroma-js": "^3.1.1",
     "@types/react": "^18.3.24",
     "@types/react-dom": "^18.3.7",
     "@vitejs/plugin-react": "^4.5.2",

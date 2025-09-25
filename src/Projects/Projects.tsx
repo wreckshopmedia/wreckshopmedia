@@ -1,5 +1,5 @@
-import { Box, Title, Text, Button } from '@mantine/core';
-import { Link } from 'react-router-dom';
+import { Box, Title, Text } from '@mantine/core';
+
 import { useProjectsStyles } from './useProjectsStyles';
 import { PageHelmet, useGlobalStyles } from '../Global';
 
@@ -10,23 +10,14 @@ export function Projects() {
     <Box id="projects">
       <PageHelmet title="Projects" description="Learn more projects our company" />
       <Box className={cx(globalClasses.page, classes.projectsOuter)}>
-        <Title order={1}>PROJECTS HERE yaaaaaaaaa</Title>
-        <Text component="p">Side by side view porjects that ir neato stuff</Text>
-        <Button variant="outline" color="darkblue" radius="md" component={Link} to="/" mt="md">
-          Back Home
-        </Button>
-
-        <Button
-          variant="outline"
-          color="darkgray"
-          radius="md"
-          component={Link}
-          to="/contact"
-          mt="md"
-          ml="md"
-        >
-          Contact Us
-        </Button>
+        <Title order={1}>STUFF I DUN DID</Title>
+        <Title order={4}>And/or stuff I be doing</Title>
+        <Text component="p">
+          This page will probably be updated a lot. Like, all the time. Like I am constantly doing a
+          bajillion things so get ready to wet your pants, Daphne. It's go time. Also, motion to
+          spell it "pance" moving forward. Great...now I got squiggly lines in my code editor.
+          Cowabunga.
+        </Text>
       </Box>
     </Box>
   );
