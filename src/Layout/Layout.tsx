@@ -5,6 +5,7 @@ import { Outlet } from 'react-router-dom';
 import { HeaderMenu, Footer, ColorChecker } from '..';
 import { useLayoutStyles } from '.';
 
+
 export function Layout() {
   const { classes } = useLayoutStyles();
   const location = useLocation();

@@ -2,10 +2,14 @@ import { createStyles } from '@mantine/core';
 
 export const useColorCheckerStyles = createStyles((theme) => ({
   colorCheckerOuter: {
+    position: 'absolute',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
+    margin: 0,
+    left: '3%',
+    bottom: '7%',
   },
 
   blackBox: {

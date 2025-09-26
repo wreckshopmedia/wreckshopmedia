@@ -34,6 +34,10 @@ export const useHomeStyles = createStyles((theme) => ({
     cursor: 'pointer',
     transformOrigin: 'center',
     transition: 'transform 150ms ease, box-shadow 150ms ease, background 150ms ease',
+
+    h4: {
+      textTransform: 'capitalize',
+    },
     '&:hover': {
       transform: 'scale(1.05)',
       boxShadow: theme.shadows.xl,

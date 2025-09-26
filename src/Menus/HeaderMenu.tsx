@@ -1,9 +1,10 @@
 import { Header, Box } from '@mantine/core';
 import { useHeaderMenuStyles } from '.';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { SkullLogo } from '../SkullLogo';
 import { HEADER_HEIGHT } from '../theme/theme';
 import { useIsAtTop } from '../hooks';
+import { navLinks } from '../Global';
 
 export interface HeaderMenuProps {
   show?: boolean;
@@ -12,7 +13,8 @@ export interface HeaderMenuProps {
 export function HeaderMenu(props: HeaderMenuProps) {
   const { show = true } = props;
   const isAtTop = useIsAtTop(60);
-  const { classes } = useHeaderMenuStyles({ isAtTop, show });
+  const { classes, cx } = useHeaderMenuStyles({ isAtTop, show });
+  const location = useLocation();
 
   return (
     <Header pos="fixed" id="header" height={HEADER_HEIGHT} className={classes.headerOuter}>
@@ -22,18 +24,20 @@ export function HeaderMenu(props: HeaderMenuProps) {
             <SkullLogo size="50px" />
           </Link>
           <Box h="100%" component="nav" className={classes.headerMenuOptionsWrapper}>
-            <Link className={classes.menuItem} to="/about" id="about-link">
-              ABOUT
-            </Link>
-            <Link className={classes.menuItem} to="/services" id="services-link">
-              SERVICES
-            </Link>
-            <Link className={classes.menuItem} to="/projects" id="projects-link">
-              PROJECTS
-            </Link>
-            <Link className={classes.menuItem} to="/contact" id="contact-link">
-              CONTACT
-            </Link>
+            {navLinks.map((link) => {
+              const isActive = location.pathname === `/${link.name}`;
+
+              return (
+                <Link
+                  key={link.name}
+                  className={cx(classes.menuItem, isActive && 'active')}
+                  to={`/${link.name === 'home' ? '' : link.name}`}
+                  id={`${link.name}-link`}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
           </Box>
         </Box>
       </Box>

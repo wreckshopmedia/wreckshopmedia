@@ -38,12 +38,17 @@ export const useHeaderMenuStyles = createStyles((theme, { isAtTop, show }: useHe
   },
 
   menuItem: {
+    textTransform: 'uppercase',
     background: 'transparent',
     fontFamily: '"Zain", sans-serif',
-    fontSize: '1.175rem',
+    fontSize: '1.25rem',
     fontWeight: 600,
     margin: 0,
     color: theme.colors.offWhite,
     textDecoration: 'none',
+    '&.active': {
+      color: theme.colors.offWhiteDarker,
+      fontWeight: 800,
+    },  
   },
 }));

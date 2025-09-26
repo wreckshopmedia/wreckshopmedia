@@ -4,12 +4,10 @@ import { useColorCheckerStyles } from '.';
 export function ColorChecker() {
   const { classes } = useColorCheckerStyles();
 
-  const boxSize = '40px';
+  const boxSize = 'clamp(15px, calc(0.5vw + 3vh), 40px)';
 
   return (
-    <Box className={classes.colorCheckerOuter} my="2rem"
-    pos="absolute" 
-    bottom="8%"> 
+    <Box className={classes.colorCheckerOuter}>
       <Flex justify="center" align="center">
         <Box w={boxSize} h={boxSize} className={classes.blackBox} />
         <Box w={boxSize} h={boxSize} className={classes.blackBox} />
