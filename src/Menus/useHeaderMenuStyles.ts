@@ -14,6 +14,7 @@ export const useHeaderMenuStyles = createStyles((theme, { isAtTop, show }: useHe
     transition: 'box-shadow 200ms ease-out, background 200ms ease-out 100ms, transform 300ms ease-out, opacity 400ms ease-out, backdrop-filter 200ms ease-out',
     boxShadow: isAtTop ? 'none' : '0 4px 20px #00000016',
     transform: show ? 'translateY(0)' : 'translateY(-100%)',
+    zIndex: 100,
   },
 
   headerMenuInner: {

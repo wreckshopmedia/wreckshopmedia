@@ -1,8 +1,6 @@
 import { createStyles } from '@mantine/core';
 
-export const useGlobalStyles = createStyles((theme) => ({
-  
-
+export const useGlobalStyles = createStyles(() => ({
   page: {
     width: '100%',
     minHeight: '100dvh',
@@ -11,7 +9,7 @@ export const useGlobalStyles = createStyles((theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    
+
     flexGrow: 1,
     '& h1, h2, h3,': {
       textWrap: 'balance',
@@ -23,34 +21,31 @@ export const useGlobalStyles = createStyles((theme) => ({
     p: {
       fontSize: '1.125rem',
       lineHeight: '1.3em',
-      
     },
   },
 
-  wreckText: {
-    color: theme.colors.yellow,
-    fontSize: '2.5rem',
-    letterSpacing: '0.15em',
-    marginBlock: 0,
-    fontFamily: '"Winky Sans", sans-serif',
-    lineHeight: '1em',
-    [theme.other.mq.mobile]: {
-      fontSize: '2rem',
-    },
-  },
+  // wreckText: {
+  //   fontSize: '2.5rem',
+  //   letterSpacing: '0.15em',
+  //   marginBlock: 0,
+  //   fontFamily: '"Winky Sans", sans-serif',
+  //   lineHeight: '1em',
+  //   [theme.other.mq.mobile]: {
+  //     fontSize: '2rem',
+  //   },
+  // },
 
-  shopText: {
-    fontSize: 'inherit',
-    fontWeight: 'inherit',
-    fontFamily: 'inherit',
-    lineHeight: 'inherit',
-    textDecoration: 'inherit',
-    textUnderlineOffset: 'inherit',
-    textDecorationThickness: 'inherit',
-    textDecorationLine: 'inherit',
-    textTransform: 'inherit',
-    fontStyle: 'inherit',
-    letterSpacing: 'inherit',
-    color: theme.colors.blue,
-  },
+  // shopText: {
+  //   fontSize: 'inherit',
+  //   fontWeight: 'inherit',
+  //   fontFamily: 'inherit',
+  //   lineHeight: 'inherit',
+  //   textDecoration: 'inherit',
+  //   textUnderlineOffset: 'inherit',
+  //   textDecorationThickness: 'inherit',
+  //   textDecorationLine: 'inherit',
+  //   textTransform: 'inherit',
+  //   fontStyle: 'inherit',
+  //   letterSpacing: 'inherit',
+  // },
 }));

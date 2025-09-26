@@ -3,6 +3,7 @@ import chroma from 'chroma-js';
 
 // ------------------------------------------------------------ //
 // ------------------- EXPORTED GLOBAL VARS ------------------- //
+// --------------- IF YOU UPDATE, UPDATE THESE! --------------- //
 // ------------------------------------------------------------ //
 
 export const EERIE_BLACK: string = '#222725';
@@ -111,6 +112,14 @@ export const theme: MantineThemeOverride = {
   },
 
   fontFamily: '"Zain", sans-serif',
+
+  breakpoints: {
+    xs: `${XS}px`,
+    sm: `${SM}px`,
+    md: `${MD}px`,
+    lg: `${LG}px`,
+    xl: `${XL}px`,
+  },
 
   other: {
     inlinePadding: INLINE_PADDING,
