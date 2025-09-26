@@ -17,8 +17,6 @@ export function HeaderMenu(props: HeaderMenuProps) {
   const { classes, cx } = useHeaderMenuStyles({ isAtTop, show });
   const location = useLocation();
 
-  console.log('isMobile:', isMobile);
-
   return (
     <Header pos="fixed" id="header" height={HEADER_HEIGHT} className={classes.headerOuter}>
       <Box h="100%" className={classes.headerMenuInner} id="header-menu">
