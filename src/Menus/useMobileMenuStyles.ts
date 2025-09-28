@@ -15,13 +15,13 @@ export const useMobileMenuStyles = createStyles((theme) => ({
 
     svg: {
       '& *': {
-        fill: theme.colors.offWhite,
+        fill: theme.colors.offWhiteLighter,
       },
     },
     '&:hover': {
       svg: {
         '& *': {
-          fill: theme.colors.offWhiteDarker,
+          fill: theme.colors.offWhiteDark,
         },
       },
     },
@@ -31,7 +31,7 @@ export const useMobileMenuStyles = createStyles((theme) => ({
     section: {
       position: 'relative',
       zIndex: 1000,
-      backgroundColor: theme.colors.offWhiteLightest,
+      backgroundColor: theme.colors.blue,
     },
   },
 
@@ -54,34 +54,57 @@ export const useMobileMenuStyles = createStyles((theme) => ({
     
   },
 
-  mobileMenuLogoLink: {},
+  mobileMenuLogoLink: { 
+    // bottom skull styles?
+  },
+
+  mobileMenuTitleLink: {
+    textDecoration: 'none',
+    cursor: 'pointer',
+    '& h1, & span': {
+
+      transition: 'color 300ms ease-out, transform 150ms ease-out',
+    },
+    '&:hover': {
+      transform: 'translateX(30px)',
+      h1: { // "WRECK"
+        color: theme.colors.offWhite,
+        transform: 'translateX(10px)',
+        span: { // "SHOP"
+          color: theme.colors.yellow,
+          transform: 'translateX(10px)',
+        },
+      },
+    },
+
+  },
 
   mobileMenuItem: {
     textTransform: 'uppercase',
-
     marginBlock: '0.25em',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'flex-start',
+    lineHeight: '1.35em',
     
     textDecoration: 'none',
     borderRadius: '8px',
     fontWeight: 800,
     letterSpacing: '0.05em',
-    color: theme.colors.eerieBlack,
-    padding: '0.15em 0.15em 0.15em 0.5em',
+    color: theme.colors.offWhite,
+    padding: '0.25em 0.15em 0.15em 0.5em',
     fontSize: 'clamp(1.25rem, 7vw, 1.5rem)',
     fontFamily: '"Zain", sans-serif',
 
     '&.active': {
-      backgroundColor: `${theme.colors.blue}30`,
+      backgroundColor: `${theme.colors.blueDark}60`,
       pointerEvents: 'none',
       cursor: 'default',
     },
 
     '&:hover': {
-      backgroundColor: theme.colors.blueLightest,
+      backgroundColor: theme.colors.blueDarkest,
     },
   },
 }));

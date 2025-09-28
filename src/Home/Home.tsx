@@ -22,7 +22,7 @@ export function Home() {
               radius="lg"
               p="lg"
             >
-              <Title order={4}>{link.name}</Title>
+              <Title order={4} className={globalClasses.titleText}>{link.name}</Title>
               <Text component="p">{link.blurb}</Text>
             </Paper>
           ))}

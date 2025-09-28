@@ -16,15 +16,18 @@ export const useHomeStyles = createStyles((theme) => ({
     width: '100%',
     height: '100%',
     paddingBlock: 'min(2em, 1em + 2cqi)',
+    backgroundColor: theme.colors.offWhiteLightest,
   },
 
   homeCard: {
-    background: `${theme.colors.eerieBlack}10`,
+    containerType: 'inline-size',
+    background: `color-mix(in srgb, ${theme.colors.eerieBlack}80 30%, ${theme.colors.peach} 70%)`,
     color: theme.colors.offWhite,
     border: 'none',
     width: '20%',
     flexBasis: '20%',
-    minWidth: '180px',
+    minWidth: '170px',
+    maxWidth: '200px',
     aspectRatio: '4 / 5',
     display: 'flex',
     flexDirection: 'column',
@@ -37,6 +40,8 @@ export const useHomeStyles = createStyles((theme) => ({
 
     h4: {
       textTransform: 'capitalize',
+      fontSize: '19cqi',
+      fontWeight: 600,
     },
     '&:hover': {
       transform: 'scale(1.05)',

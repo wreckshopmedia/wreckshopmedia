@@ -21,6 +21,16 @@ export const MD = 991;
 export const LG = 1200;
 export const XL = 1400;
 
+export const TITLE_TEXT_STYLES = {
+  fontFamily: '"Winky Sans", sans-serif',
+  fontWeight: 700,
+  letterSpacing: '0.1em',
+  marginBlock: 0,
+  lineHeight: '1em',
+  textTransform: 'uppercase' as const,
+  textWrap: 'balance' as const,
+};
+
 export const INLINE_PADDING = `
   max(10vw, calc(-1200px + 100vw) / 2);
     @media (max-width: ${MD}px) {
@@ -31,6 +41,7 @@ export const INLINE_PADDING = `
     };
   `;
 
+// ------------------------------------------------------------ //
 // ------------------------------------------------------------ //
 // ------------------------------------------------------------ //
 
@@ -61,7 +72,7 @@ export const theme: MantineThemeOverride = {
     eerieBlack: [EERIE_BLACK],
     eerieBlackDark: [chroma(EERIE_BLACK).darken(0.5).hex()],
     eerieBlackDarker: [chroma(EERIE_BLACK).darken(1).hex()],
-    eerieBlackDarkest: [chroma(EERIE_BLACK).darken(1.5).hex()], 
+    eerieBlackDarkest: [chroma(EERIE_BLACK).darken(1.5).hex()],
     eerieBlackLight: [chroma(EERIE_BLACK).brighten(0.5).hex()],
     eerieBlackLighter: [chroma(EERIE_BLACK).brighten(1).hex()],
     eerieBlackLightest: [chroma(EERIE_BLACK).brighten(1.5).hex()],
@@ -102,8 +113,8 @@ export const theme: MantineThemeOverride = {
   headings: {
     fontFamily: '"Winky Sans", sans-serif',
     sizes: {
-      h1: { fontSize: '3rem', lineHeight: '1.1em', fontWeight: 700 },
-      h2: { fontSize: '2.5rem', lineHeight: '1.15em', fontWeight: 600 },
+      h1: { fontSize: '3rem', lineHeight: '1em', fontWeight: 700 },
+      h2: { fontSize: '2.5rem', lineHeight: '1.1em', fontWeight: 600 },
       h3: { fontSize: '2rem', lineHeight: '1.2em', fontWeight: 600 },
       h4: { fontSize: '1.5rem', lineHeight: '1.25em', fontWeight: 500 },
       h5: { fontSize: '1.25rem', lineHeight: '1.3em', fontWeight: 500 },

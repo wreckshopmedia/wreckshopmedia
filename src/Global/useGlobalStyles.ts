@@ -1,4 +1,5 @@
 import { createStyles } from '@mantine/core';
+import { TITLE_TEXT_STYLES } from '../theme/theme';
 
 export const useGlobalStyles = createStyles(() => ({
   page: {
@@ -22,6 +23,10 @@ export const useGlobalStyles = createStyles(() => ({
       fontSize: '1.125rem',
       lineHeight: '1.3em',
     },
+  },
+
+  titleText: {
+    ...TITLE_TEXT_STYLES, // UPDATE IN THEME FILE
   },
 
   // wreckText: {
