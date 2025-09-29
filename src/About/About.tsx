@@ -10,10 +10,25 @@ export function About() {
     <Box id="about">
       <PageHelmet title="About" description="Learn more about our company" />
       <Box mt="80px" className={cx(globalClasses.page, classes.aboutOuter)}>
-        <Title order={1} ta="center">ABOUT THE FLERP</Title>
-        <Title order={2} ta="center">Little Subtitle Of Stuff </Title>
+        <Title order={1} ta="center">
+          ABOUT THE FLERP
+        </Title>
+        <Title order={4} ta="center">
+          Little Subtitle Of Stuff and Craps
+        </Title>
 
         <SkullLogo size="200px" />
+
+        <Text component="p">
+          This is some paragraph text that describes Wreck Shop Media LLC. We are a small web
+          development and digital marketing agency located in beautiful Fort Collins, Colorado. We
+          love building websites and helping businesses grow their online presence through various
+          digital marketing strategies. Our team is passionate about what we do and we strive to
+          deliver the best possible results for our clients. Whether you're looking for a new
+          website, need help with SEO, or want to run a social media campaign, we've got you
+          covered. Contact us today to learn more about how we can help your business succeed
+          online!
+        </Text>
         <Text component="p">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. In quia asperiores reprehenderit
           quam accusamus labore! Nam at possimus autem dolor nostrum reprehenderit vel alias, quo
@@ -72,29 +87,6 @@ export function About() {
           nihil accusamus, assumenda a corrupti ducimus iusto magni ullam, magnam dolores quibusdam
           aspernatur quaerat corporis rem adipisci asperiores laborum voluptatibus sunt autem
           recusandae ab! Repellendus quae, earum provident eaque officia, quisquam labore autem
-        </Text>
-        <Text component="p">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit nobis sed rem
-          itaque molestiae consectetur dolor voluptatibus eaque enim? Magni laborum pariatur,
-          aliquid sint explicabo quis porro neque, ducimus dolorem doloremque officia similique
-          illum? Dolorum est ullam earum. Inventore quis veritatis possimus fugiat, eaque
-          consequatur vel at voluptatum obcaecati minima eius deleniti, debitis ullam facere illum
-          laudantium, iusto vero. Consequatur alias neque itaque, delectus, nesciunt fugit ab harum
-          nam maiores rerum sequi maxime rem repellendus ea dolor magnam ipsam reprehenderit
-          voluptatem ad facilis, iure quae nobis ipsa aut. Nihil praesentium adipisci esse
-          perspiciatis doloribus maiores est illo modi iusto. Nemo delectus est exercitationem
-          debitis consequatur repellendus id ipsam labore eius, similique consequuntur adipisci
-          repudiandae placeat accusamus quos consectetur inventore, ullam blanditiis? Corrupti,
-          vero. Suscipit ut excepturi molestiae vitae quae praesentium libero voluptas consectetur,
-          culpa nihil nemo hic pariatur cum. Esse reprehenderit nemo laudantium, quas, eos odio
-          totam maiores distinctio, error expedita dignissimos fugiat reiciendis ea soluta pariatur
-          sequi aperiam asperiores dolore similique. Recusandae, placeat optio quidem quisquam
-          veritatis dolore ipsa nulla facere cum, tenetur consectetur a architecto repellat ad
-          doloribus. Deserunt iste dolorum obcaecati, soluta officia iure nesciunt vero, cum
-          accusamus nihil minima tempore ullam magni natus? Id, natus veritatis. Facilis ullam est
-          officiis! Sunt adipisci sed praesentium deserunt aperiam cum laborum incidunt beatae nulla
-          labore nam, iusto harum dolorem ipsam quaerat laboriosam iure nihil tempore modi deleniti
-          quae nostrum recusandae.
         </Text>
       </Box>
     </Box>

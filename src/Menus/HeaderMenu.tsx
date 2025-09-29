@@ -1,32 +1,50 @@
 import { Header, Box } from '@mantine/core';
-import { useHeaderMenuStyles } from '.';
-import { Link } from 'react-router-dom';
-import { SkullLogo } from '../SkullLogo/SkullLogo';
+import { useHeaderMenuStyles, MobileMenu } from '.';
+import { Link, useLocation } from 'react-router-dom';
+import { SkullLogo } from '../SkullLogo';
+import { HEADER_HEIGHT } from '../theme/theme';
+import { useIsAtTop, useIsMobile } from '../hooks';
+import { navLinks } from '../Global';
 
-export function HeaderMenu() {
-  const { classes } = useHeaderMenuStyles();
+export interface HeaderMenuProps {
+  show?: boolean;
+}
+
+export function HeaderMenu(props: HeaderMenuProps) {
+  const { show = true } = props;
+  const isMobile = useIsMobile();
+  const isAtTop = useIsAtTop(60);
+  const { classes, cx } = useHeaderMenuStyles({ isAtTop, show });
+  const location = useLocation();
+
   return (
-    <Header pos="fixed" id="header" height="80px" className={classes.headerOuter}>
+    <Header pos="fixed" id="header" height={HEADER_HEIGHT} className={classes.headerOuter}>
       <Box h="100%" className={classes.headerMenuInner} id="header-menu">
-        <Link to="/">
-          <SkullLogo size="50px" />
-        </Link>
-        <Box h="100%" component="nav" className={classes.headerMenuOptionsWrapper}>
-          <Link className={classes.menuItem} to="/home">
-            HOME
+        <Box className={classes.headerMenu} m={0} p={0}>
+          <Link id="home-link" to="/home">
+            <SkullLogo size="50px" />
           </Link>
-          <Link className={classes.menuItem} to="/about">
-            ABOUT
-          </Link>
-          <Link className={classes.menuItem} to="/services">
-            SERVICES
-          </Link>
-          <Link className={classes.menuItem} to="/projects">
-            PROJECTS
-          </Link>
-          <Link className={classes.menuItem} to="/contact">
-            CONTACT
-          </Link>
+
+          {isMobile ? (
+            <MobileMenu />
+          ) : (
+            <Box h="100%" component="nav" className={classes.headerMenuOptionsWrapper}>
+              {navLinks.map((link) => {
+                const isActive = location.pathname === `/${link.name}`;
+
+                return (
+                  <Link
+                    key={link.name}
+                    className={cx(classes.menuItem, isActive && 'active')}
+                    to={`/${link.name === 'home' ? '' : link.name}`}
+                    id={`${link.name}-link`}
+                  >
+                    {link.name}
+                  </Link>
+                );
+              })}
+            </Box>
+          )}
         </Box>
       </Box>
     </Header>

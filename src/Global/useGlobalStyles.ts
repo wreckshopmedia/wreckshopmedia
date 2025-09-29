@@ -1,8 +1,7 @@
 import { createStyles } from '@mantine/core';
+import { TITLE_TEXT_STYLES } from '../theme/theme';
 
-export const useGlobalStyles = createStyles((theme) => ({
-  
-
+export const useGlobalStyles = createStyles(() => ({
   page: {
     width: '100%',
     minHeight: '100dvh',
@@ -11,7 +10,7 @@ export const useGlobalStyles = createStyles((theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    
+
     flexGrow: 1,
     '& h1, h2, h3,': {
       textWrap: 'balance',
@@ -19,32 +18,15 @@ export const useGlobalStyles = createStyles((theme) => ({
     '& h4, h5, h6, p, a, span': {
       textWrap: 'pretty',
     },
-  },
 
-  wreckText: {
-    color: theme.colors.yellow,
-    fontSize: '2.5rem',
-    letterSpacing: '0.15em',
-    marginBlock: 0,
-    fontFamily: '"Winky Sans", sans-serif',
-    lineHeight: '1em',
-    [theme.other.mq.mobile]: {
-      fontSize: '2rem',
+    p: {
+      fontSize: '1.25rem',
+      lineHeight: '1.125em',
+      
     },
   },
 
-  shopText: {
-    fontSize: 'inherit',
-    fontWeight: 'inherit',
-    fontFamily: 'inherit',
-    lineHeight: 'inherit',
-    textDecoration: 'inherit',
-    textUnderlineOffset: 'inherit',
-    textDecorationThickness: 'inherit',
-    textDecorationLine: 'inherit',
-    textTransform: 'inherit',
-    fontStyle: 'inherit',
-    letterSpacing: 'inherit',
-    color: theme.colors.blue,
+  titleText: {
+    ...TITLE_TEXT_STYLES, // UPDATE IN THEME FILE
   },
 }));

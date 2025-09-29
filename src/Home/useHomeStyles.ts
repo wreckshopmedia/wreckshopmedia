@@ -19,11 +19,14 @@ export const useHomeStyles = createStyles((theme) => ({
   },
 
   homeCard: {
-    background: `${theme.colors.eerieBlack}10`,
+    containerType: 'inline-size',
+    background: `color-mix(in srgb, ${theme.colors.eerieBlack}80 30%, ${theme.colors.peach} 70%)`,
+    color: theme.colors.offWhite,
     border: 'none',
     width: '20%',
     flexBasis: '20%',
-    minWidth: '180px',
+    minWidth: '170px',
+    maxWidth: '200px',
     aspectRatio: '4 / 5',
     display: 'flex',
     flexDirection: 'column',
@@ -33,27 +36,24 @@ export const useHomeStyles = createStyles((theme) => ({
     cursor: 'pointer',
     transformOrigin: 'center',
     transition: 'transform 150ms ease, box-shadow 150ms ease, background 150ms ease',
+
     '&:hover': {
       transform: 'scale(1.05)',
       boxShadow: theme.shadows.xl,
-      
     },
-
-    h3: {
-      fontFamily: '"Winky Sans", sans-serif',
-      fontWeight: 600,
-      fontSize: '1.5rem',
-      marginBlock: 0,
-      lineHeight: '1em',
-      
+  },
+  
+  
+  cardTitle: {
+    // h4 from card top/front
+    textTransform: 'uppercase',
+    fontSize: '22cqi',
+    fontWeight: 700,
+    letterSpacing: '0.03em',
+    '&[data-card-name="contact"]': {
+      // idea do this stuff
+      // fontSize: '27cqi',
     },
-    h4: {
-      fontFamily: '"Zain", sans-serif',
-      fontWeight: 400,
-      fontSize: '1.25rem',
-      marginBlock: 0,
-      lineHeight: '1em',
-      
-    },
+    
   },
 }));
