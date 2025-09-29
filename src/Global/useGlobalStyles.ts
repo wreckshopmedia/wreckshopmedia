@@ -22,6 +22,7 @@ export const useGlobalStyles = createStyles(() => ({
     p: {
       fontSize: '1.25rem',
       lineHeight: '1.125em',
+      
     },
   },
 

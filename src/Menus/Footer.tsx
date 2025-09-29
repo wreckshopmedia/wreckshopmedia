@@ -9,7 +9,7 @@ export function Footer() {
   return (
     <Box component="footer" className={classes.footerOuter} m={0} p="1rem">
       <Text align="center" component="h6" my={0}>
-        © 2025 Wreck Shop Media LLC. All rights reserved.
+        Copyright © 2025 Wreck Shop Media LLC. All Rights Reserved So There.
       </Text>
     </Box>
   );
