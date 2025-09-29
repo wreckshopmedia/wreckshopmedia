@@ -22,7 +22,13 @@ export function Home() {
               radius="lg"
               p="lg"
             >
-              <Title order={4} className={globalClasses.titleText}>{link.name}</Title>
+              <Title
+                data-card-name={link.name}
+                order={4}
+                className={cx(globalClasses.titleText, classes.cardTitle)}
+              >
+                {link.sillyName}
+              </Title>
               <Text component="p">{link.blurb}</Text>
             </Paper>
           ))}

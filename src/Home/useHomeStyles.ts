@@ -16,7 +16,6 @@ export const useHomeStyles = createStyles((theme) => ({
     width: '100%',
     height: '100%',
     paddingBlock: 'min(2em, 1em + 2cqi)',
-    backgroundColor: theme.colors.offWhiteLightest,
   },
 
   homeCard: {
@@ -38,14 +37,23 @@ export const useHomeStyles = createStyles((theme) => ({
     transformOrigin: 'center',
     transition: 'transform 150ms ease, box-shadow 150ms ease, background 150ms ease',
 
-    h4: {
-      textTransform: 'capitalize',
-      fontSize: '19cqi',
-      fontWeight: 600,
-    },
     '&:hover': {
       transform: 'scale(1.05)',
       boxShadow: theme.shadows.xl,
     },
+  },
+  
+  
+  cardTitle: {
+    // h4 from card top/front
+    textTransform: 'uppercase',
+    fontSize: '22cqi',
+    fontWeight: 700,
+    letterSpacing: '0.03em',
+    '&[data-card-name="contact"]': {
+      // idea do this stuff
+      // fontSize: '27cqi',
+    },
+    
   },
 }));

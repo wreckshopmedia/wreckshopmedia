@@ -1,6 +1,14 @@
 export const navLinks = [
-  { name: 'about', blurb: 'About art, short blurb' },
-  { name: 'services', blurb: 'Services art, short blurb' },
-  { name: 'projects', blurb: 'Projects art, short blurb' },
-  { name: 'contact', blurb: 'Contact art, short blurb' },
+  { name: 'about',
+    sillyName: 'New Site Who Dis',
+    blurb: 'About art, short blurb' },
+  { name: 'services',
+    sillyName: 'I Do Stuff',
+    blurb: 'Services art, short blurb' },
+  { name: 'projects',
+    sillyName: 'I Did Things',
+    blurb: 'Projects art, short blurb' },
+  { name: 'contact',
+    sillyName: 'Get At Me',
+    blurb: 'Contact art, short blurb' },
 ];

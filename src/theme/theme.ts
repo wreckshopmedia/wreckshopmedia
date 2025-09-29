@@ -22,9 +22,9 @@ export const LG = 1200;
 export const XL = 1400;
 
 export const TITLE_TEXT_STYLES = {
-  fontFamily: '"Winky Sans", sans-serif',
+  fontFamily: '"Lilita One", sans-serif',
   fontWeight: 700,
-  letterSpacing: '0.1em',
+  letterSpacing: '0.05em',
   marginBlock: 0,
   lineHeight: '1em',
   textTransform: 'uppercase' as const,
@@ -51,7 +51,8 @@ export const theme: MantineThemeOverride = {
       scrollBehavior: 'smooth',
       colorScheme: 'light dark',
       '--zain': '"Zain", sans-serif', // paragraph text
-      '--winky-sans': '"Winky Sans", sans-serif', // headings and logos (for now)
+      '--lilita-one': '"Lilita One", sans-serif', // alt heading???
+      '--winky-sans': '"Winky Sans", sans-serif', // old headings!
     },
 
     body: {
@@ -111,7 +112,7 @@ export const theme: MantineThemeOverride = {
   },
 
   headings: {
-    fontFamily: '"Winky Sans", sans-serif',
+    fontFamily: '"Lilita One", sans-serif',
     sizes: {
       h1: { fontSize: '3rem', lineHeight: '1em', fontWeight: 700 },
       h2: { fontSize: '2.5rem', lineHeight: '1.1em', fontWeight: 600 },

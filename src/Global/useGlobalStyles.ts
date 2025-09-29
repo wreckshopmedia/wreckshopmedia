@@ -20,37 +20,12 @@ export const useGlobalStyles = createStyles(() => ({
     },
 
     p: {
-      fontSize: '1.125rem',
-      lineHeight: '1.3em',
+      fontSize: '1.25rem',
+      lineHeight: '1.125em',
     },
   },
 
   titleText: {
     ...TITLE_TEXT_STYLES, // UPDATE IN THEME FILE
   },
-
-  // wreckText: {
-  //   fontSize: '2.5rem',
-  //   letterSpacing: '0.15em',
-  //   marginBlock: 0,
-  //   fontFamily: '"Winky Sans", sans-serif',
-  //   lineHeight: '1em',
-  //   [theme.other.mq.mobile]: {
-  //     fontSize: '2rem',
-  //   },
-  // },
-
-  // shopText: {
-  //   fontSize: 'inherit',
-  //   fontWeight: 'inherit',
-  //   fontFamily: 'inherit',
-  //   lineHeight: 'inherit',
-  //   textDecoration: 'inherit',
-  //   textUnderlineOffset: 'inherit',
-  //   textDecorationThickness: 'inherit',
-  //   textDecorationLine: 'inherit',
-  //   textTransform: 'inherit',
-  //   fontStyle: 'inherit',
-  //   letterSpacing: 'inherit',
-  // },
 }));

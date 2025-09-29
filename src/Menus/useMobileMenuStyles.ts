@@ -54,9 +54,7 @@ export const useMobileMenuStyles = createStyles((theme) => ({
     
   },
 
-  mobileMenuLogoLink: { 
-    // bottom skull styles?
-  },
+
 
   mobileMenuTitleLink: {
     textDecoration: 'none',
@@ -106,5 +104,9 @@ export const useMobileMenuStyles = createStyles((theme) => ({
     '&:hover': {
       backgroundColor: theme.colors.blueDarkest,
     },
+  },
+
+    mobileMenuLogoLink: { 
+    // bottom skull styles?
   },
 }));
