@@ -4,7 +4,7 @@ import { useWreckShopTitleStyles } from '.';
 export interface WreckShopTitleProps {
   wreckColor?: string;
   shopColor?: string;
-  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | string;
 }
 
 export function WreckShopTitle(props: WreckShopTitleProps) {
@@ -14,18 +14,22 @@ export function WreckShopTitle(props: WreckShopTitleProps) {
   // function to get font size
   function getFontSize(size: WreckShopTitleProps['size']) {
     switch (size) {
+      case 'xxs': 
+        return 'clamp(14px, 2cqi, 18px)';
       case 'xs':
-        return 'clamp(1rem, 4cqi, 1.5rem)';
+        return 'clamp(1rem, 3cqi, 1.5rem)';
       case 'sm':
-        return 'clamp(1.5rem, 6cqi, 2rem)';
+        return 'clamp(1.5rem, 4cqi, 2rem)';
       case 'md':
-        return 'clamp(2rem, 8cqi, 2.5rem)';
+        return 'clamp(2rem, 5cqi, 2.5rem)';
       case 'lg':
-        return 'clamp(2.5rem, 10cqi, 3rem)';
+        return 'clamp(2.5rem, 6cqi, 3rem)';
       case 'xl':
-        return 'clamp(3rem, 12cqi, 4rem)';
+        return 'clamp(3rem, 7cqi, 4rem)';
+      case 'xxl':
+        return 'clamp(3.5rem, 8cqi, 4.5rem)';
       default:
-        return 'clamp(2rem, 14cqi, 2.5rem)'; // default to 'md'
+        return size; // default to custom size if provided as string
     }
   }
 

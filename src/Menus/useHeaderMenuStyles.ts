@@ -7,14 +7,21 @@ interface useHeaderMenuStylesProps {
 
 export const useHeaderMenuStyles = createStyles((theme, { isAtTop, show }: useHeaderMenuStylesProps) => ({
   headerOuter: {
-    background: isAtTop ? 'transparent' : `${theme.colors.peach}DD`,
+    background: theme.colors.eerieBlack,
     backdropFilter: isAtTop ? 'none' : 'blur(3px)',
     opacity: show ? 1 : 0,
     border: 'none',
     transition: 'box-shadow 200ms ease-out, background 200ms ease-out 100ms, transform 300ms ease-out, opacity 400ms ease-out, backdrop-filter 200ms ease-out',
     boxShadow: isAtTop ? 'none' : '0 4px 20px #00000016',
-    transform: show ? 'translateY(0)' : 'translateY(-100%)',
+    transform: show ? 'translateY(0) rotate(8deg)' : 'translateY(-100%)',
     zIndex: 100,
+    left: '50%',
+    transformOrigin: 'top',
+    transformStyle: 'preserve-3d',
+    translate: '-50% 0',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
   },
 
   headerMenuInner: {
@@ -27,23 +34,34 @@ export const useHeaderMenuStyles = createStyles((theme, { isAtTop, show }: useHe
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
+    justifyContent: 'flex-end',
+  },
+
+  menuTitleLinksBox: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'space-around',
+    height: '100%',
   },
 
   headerMenuOptionsWrapper: {
     display: 'flex',
     flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-around',
-    gap: 'min(2em, 1em + 2cqi)',
+    alignItems: 'flex-end',
+    justifyContent: 'space-between',
+    width: '100%',
+    marginInline: 'min(2em, 1em + 2cqi)',
+    height: '90%',
   },
 
   menuItem: {
     textTransform: 'uppercase',
     background: 'transparent',
     fontFamily: '"Zain", sans-serif',
-    fontSize: '1.25rem',
+    fontSize: 'clamp(1.125rem, 3cqi, 1.75rem)',
     fontWeight: 600,
+    lineHeight: '1.125em',
     margin: 0,
     color: theme.colors.offWhite,
     textDecoration: 'none',

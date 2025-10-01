@@ -12,7 +12,7 @@ export const BLUE: string = '#0E79B2';
 export const PEACH: string = '#F68E5F';
 export const OFF_WHITE: string = '#FAFAFF';
 
-export const HEADER_HEIGHT = '80px';
+export const HEADER_HEIGHT = 'clamp(70px, min(calc(calc(50px + 4cqi) + 10dvh), calc(55px + 7cqi)), 140px)';
 
 export const BASE = 0;
 export const XS = 500;

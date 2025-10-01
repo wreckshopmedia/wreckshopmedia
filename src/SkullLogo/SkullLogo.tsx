@@ -2,11 +2,12 @@ import { useSkullLogoStyles } from './useSkullLogoStyles';
 
 type SkullLogoProps = {
   size?: string;
+  whiteBorder?: boolean;
 };
 
 export function SkullLogo(props: SkullLogoProps) {
-  const { size = '200px' } = props;
-  const { classes } = useSkullLogoStyles();
+  const { size = '200px', whiteBorder } = props;
+  const { classes } = useSkullLogoStyles({ whiteBorder });
 
   return (
     <svg
