@@ -1,16 +1,16 @@
 import { createStyles } from '@mantine/core';
 
 interface useSkullLogoStylesProps {
-  whiteBorder?: boolean;
+  borderColor?: string;
 }
 
 export const useSkullLogoStyles = createStyles(
-  (theme, { whiteBorder = false }: useSkullLogoStylesProps) => ({
+  (theme, { borderColor }: useSkullLogoStylesProps) => ({
     skullLogoSvg: {
       display: 'block',
       margin: 'auto',
-      filter: whiteBorder
-        ? `drop-shadow(-1px -1px 0 ${theme.colors.offWhite}) drop-shadow(1px -1px 0 ${theme.colors.offWhite}) drop-shadow(-1px 1px 0 ${theme.colors.offWhite}) drop-shadow(1px 1px 0 ${theme.colors.offWhite})`
+      filter: borderColor
+        ? `drop-shadow(-1px -1px 0 ${theme.colors[borderColor]}) drop-shadow(1px -1px 0 ${theme.colors[borderColor]}) drop-shadow(-1px 1px 0 ${theme.colors[borderColor]}) drop-shadow(1px 1px 0 ${theme.colors[borderColor]})`
         : 'none',
     },
   })

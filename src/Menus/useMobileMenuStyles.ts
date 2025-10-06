@@ -31,7 +31,10 @@ export const useMobileMenuStyles = createStyles((theme) => ({
     section: {
       position: 'relative',
       zIndex: 1000,
-      backgroundColor: theme.colors.blue,
+      backgroundColor: theme.colors.eerieBlack,
+    },
+    '& .mantine-Drawer-body': {
+      paddingInline: '1.5rem',
     },
   },
 
@@ -51,30 +54,27 @@ export const useMobileMenuStyles = createStyles((theme) => ({
     h1: {
       marginBottom: 'min(2rem, calc(2vh + 1vw))',
     },
-    
   },
-
-
 
   mobileMenuTitleLink: {
     textDecoration: 'none',
     cursor: 'pointer',
     '& h1, & span': {
-
-      transition: 'color 300ms ease-out, transform 150ms ease-out',
+      transition: 'color 180ms ease-out, transform 120ms ease-out',
     },
     '&:hover': {
       transform: 'translateX(30px)',
-      h1: { // "WRECK"
-        color: theme.colors.offWhite,
+      h1: {
+        // "WRECK"
+        color: theme.colors.blue,
         transform: 'translateX(10px)',
-        span: { // "SHOP"
+        span: {
+          // "SHOP"
           color: theme.colors.yellow,
           transform: 'translateX(10px)',
         },
       },
     },
-
   },
 
   mobileMenuItem: {
@@ -85,7 +85,7 @@ export const useMobileMenuStyles = createStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'flex-start',
     lineHeight: '1.35em',
-    
+
     textDecoration: 'none',
     borderRadius: '8px',
     fontWeight: 800,
@@ -96,17 +96,19 @@ export const useMobileMenuStyles = createStyles((theme) => ({
     fontFamily: '"Zain", sans-serif',
 
     '&.active': {
+      color: theme.colors.offWhiteDarker,
       backgroundColor: `${theme.colors.blueDark}60`,
       pointerEvents: 'none',
       cursor: 'default',
     },
 
     '&:hover': {
-      backgroundColor: theme.colors.blueDarkest,
+      backgroundColor: theme.colors.blueLightest,
+      color: theme.colors.eerieBlackDarker,
     },
   },
 
-    mobileMenuLogoLink: { 
+  mobileMenuLogoLink: {
     // bottom skull styles?
   },
 }));

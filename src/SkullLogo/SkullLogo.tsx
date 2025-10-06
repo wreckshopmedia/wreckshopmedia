@@ -1,13 +1,14 @@
 import { useSkullLogoStyles } from './useSkullLogoStyles';
+import type { ThemeColors } from '../theme/theme';
 
 type SkullLogoProps = {
   size?: string;
-  whiteBorder?: boolean;
+  borderColor: ThemeColors;
 };
 
 export function SkullLogo(props: SkullLogoProps) {
-  const { size = '200px', whiteBorder } = props;
-  const { classes } = useSkullLogoStyles({ whiteBorder });
+  const { size = '200px', borderColor } = props;
+  const { classes } = useSkullLogoStyles({ borderColor });
 
   return (
     <svg
