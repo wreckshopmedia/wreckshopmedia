@@ -12,7 +12,7 @@ export function Intro() {
       <PageHelmet />
       <Box className={cx(globalClasses.page, classes.introOuter)}>
         <Box component={Link} to="/home" className={classes.introButtonWrapper}>
-          <SkullLogo size={'160px'} />
+          <SkullLogo size='160px' />
           <WreckShopTitle />
         </Box>
       </Box>

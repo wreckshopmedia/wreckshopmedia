@@ -6,7 +6,7 @@ import { RxHamburgerMenu } from 'react-icons/rx';
 import { Link, useLocation } from 'react-router-dom';
 import { useMobileMenuStyles } from '.';
 import { SkullLogo } from '../SkullLogo';
-import { OFF_WHITE, YELLOW } from '../theme/theme';
+import { BLUE, YELLOW } from '../theme/theme';
 
 export function MobileMenu() {
   const isPhone = useIsPhone();
@@ -42,8 +42,8 @@ export function MobileMenu() {
       >
         <Box component="nav" className={classes.mobileMenuNavContainer} id="mobile-drawer-menu">
           <Box className={classes.mobileMenuTextRoutesContainer}>
-            <Link to="/" onClick={close} className={classes.mobileMenuTitleLink}>
-              <WreckShopTitle wreckColor={YELLOW} shopColor={OFF_WHITE} size="md" />
+            <Link to="/home" onClick={close} className={classes.mobileMenuTitleLink}>
+              <WreckShopTitle wreckColor={YELLOW} shopColor={BLUE} size="lg" />
             </Link>
             {navLinks.map((link) => {
               const isActive = location.pathname === `/${link.name}`;
@@ -62,8 +62,8 @@ export function MobileMenu() {
               );
             })}
           </Box>
-          <Link to="/" onClick={close} className={classes.mobileMenuLogoLink}>
-            <SkullLogo size="100px" />
+          <Link to="/" onClick={close} className={classes.mobileMenuLogoLink} >
+            <SkullLogo size="100px" borderColor="offWhite" />
           </Link>
         </Box>
       </Drawer>
