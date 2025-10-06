@@ -3,7 +3,7 @@ import type { ThemeColors } from '../theme/theme';
 
 type SkullLogoProps = {
   size?: string;
-  borderColor: ThemeColors;
+  borderColor?: ThemeColors;
 };
 
 export function SkullLogo(props: SkullLogoProps) {
