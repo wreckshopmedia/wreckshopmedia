@@ -37,7 +37,7 @@ export const INLINE_PADDING = `
       padding-inline: 6vw;
     };
     @media (max-width: ${SM}px) {
-      padding-inline: 3vw;
+      padding-inline: 4vw;
     };
   `;
 

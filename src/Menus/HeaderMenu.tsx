@@ -18,7 +18,7 @@ export function HeaderMenu(props: HeaderMenuProps) {
   const location = useLocation();
 
   return (
-    <Header pos="fixed" w="115dvw" id="header" height={HEADER_HEIGHT} className={classes.headerOuter}>
+    <Header pos="fixed" w="111dvw" id="header" height={HEADER_HEIGHT} className={classes.headerOuter}>
       <Box h="95%" className={classes.headerMenuInner} id="header-menu">
         <Box className={classes.headerMenu} m={0} p={0}>
           {/* <Link id="home-link" to="/home">
@@ -29,7 +29,7 @@ export function HeaderMenu(props: HeaderMenuProps) {
             <MobileMenu />
           ) : (
             <Box className={classes.menuTitleLinksBox}>
-              <WreckShopTitle size="clamp(2.75rem, 7.5cqi, 4.5rem)"/>
+              <WreckShopTitle size="clamp(2.75rem, 7.25cqi, 4.5rem)"/>
             <Box h="100%" component="nav" className={classes.headerMenuOptionsWrapper}>
               {navLinks.map((link) => {
                 const isActive = location.pathname === `/${link.name}`;

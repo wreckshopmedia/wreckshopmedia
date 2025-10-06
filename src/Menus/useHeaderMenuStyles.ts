@@ -13,7 +13,8 @@ export const useHeaderMenuStyles = createStyles((theme, { isAtTop, show }: useHe
     border: 'none',
     transition: 'box-shadow 200ms ease-out, background 200ms ease-out 100ms, transform 300ms ease-out, opacity 400ms ease-out, backdrop-filter 200ms ease-out',
     boxShadow: isAtTop ? 'none' : '0 4px 20px #00000016',
-    transform: show ? 'translateY(0) rotate(8deg)' : 'translateY(-100%)',
+    transform: show ? 'translateY(0)' : 'translateY(-100%)',
+    rotate: '8deg',
     zIndex: 100,
     left: '50%',
     transformOrigin: 'top',
@@ -22,11 +23,25 @@ export const useHeaderMenuStyles = createStyles((theme, { isAtTop, show }: useHe
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'flex-end',
+    [theme.other.mq.customMax(1200)]: {
+      rotate: '7deg',
+    },
+    [theme.other.mq.customMax(900)]: {
+      rotate: '6deg',
+    },
+    [theme.other.mq.customMax(500)]: {
+      rotate: '0deg',
+    },
+    
   },
 
   headerMenuInner: {
     paddingInline: theme.other.inlinePadding,
-    marginInline: 'min(60px, 3vw)',
+    marginInline: 'min(20px 2cqi)',
+    [theme.other.mq.mobile]: {
+      marginInline: '25px', // hamburger breakpoint!
+    },
+    
   },
 
   headerMenu: {
@@ -59,7 +74,7 @@ export const useHeaderMenuStyles = createStyles((theme, { isAtTop, show }: useHe
     textTransform: 'uppercase',
     background: 'transparent',
     fontFamily: '"Zain", sans-serif',
-    fontSize: 'clamp(1.125rem, 3cqi, 1.75rem)',
+    fontSize: 'clamp(1.125rem, 2.75cqi, 1.75rem)',
     fontWeight: 600,
     lineHeight: '1.125em',
     margin: 0,
@@ -67,7 +82,7 @@ export const useHeaderMenuStyles = createStyles((theme, { isAtTop, show }: useHe
     textDecoration: 'none',
     '&.active': {
       color: theme.colors.offWhiteDarker,
-      fontWeight: 800,
+
     },  
   },
 }));
