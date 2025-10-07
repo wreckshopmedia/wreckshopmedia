@@ -9,7 +9,6 @@ export function Layout() {
   const { classes } = useLayoutStyles();
   const location = useLocation();
   const [showBars, setShowBars] = useState(false);
-  // const [entering, setEntering] = useState(false);
 
 
 

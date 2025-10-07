@@ -5,7 +5,7 @@ export const useFooterStyles = createStyles((theme, { show = true }: FooterProps
   footerOuter: {
     transform: show ? 'translateY(0)' : 'translateY(calc(7dvh + 7dvw))',
     // transition: 'rotate 200ms ease-out, transform 300ms ease-out, backdrop-filter 200ms ease-out',
-    transition: 'all 250ms ease-out',
+    transition: 'all 250ms ease-out, transform 300ms ease-out',
     background: theme.colors.eerieBlack,
     width: '100dvw',
     left: '50%',
@@ -22,7 +22,7 @@ export const useFooterStyles = createStyles((theme, { show = true }: FooterProps
 
     h6: {
       fontFamily: '"Zain", sans-serif',
-      fontSize: '14px',
+      fontSize: 'clamp(13px, 2.5cqi, 16px)',
       fontWeight: 400,
       letterSpacing: '0.05em',
       marginBlock: 0,
@@ -71,6 +71,11 @@ export const useFooterStyles = createStyles((theme, { show = true }: FooterProps
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'flex-start',
+    [theme.other.mq.customMax(500)]: {
+      textAlign: 'center',
+      justifyContent: 'center',
+      marginInline: 'auto',
+    },
     [theme.other.mq.shortScreen(700)]: {
       textAlign: 'center',
       justifyContent: 'center',

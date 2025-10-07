@@ -14,6 +14,7 @@ export const useLayoutStyles = createStyles((theme) => ({
     position: 'relative',
     flex: '1 0 auto',
     width: '100%',
+  
     
   },
 }));

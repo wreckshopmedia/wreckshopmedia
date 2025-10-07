@@ -8,7 +8,7 @@ export const useGlobalStyles = createStyles((theme) => ({
     height: 'fit-content',
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center',
+    alignItems: 'flex-start',
     justifyContent: 'center',
     flexGrow: 1,
     paddingInline: theme.other.inlinePadding, // "CENTER LOCK"
@@ -23,6 +23,7 @@ export const useGlobalStyles = createStyles((theme) => ({
       fontSize: '1.25rem',
       lineHeight: '1.125em',
     },
+   
   },
 
   centerLock: {
@@ -32,5 +33,6 @@ export const useGlobalStyles = createStyles((theme) => ({
   titleText: {
     ...TITLE_TEXT_STYLES, // UPDATE IN THEME FILE
   },
+
 
 }));

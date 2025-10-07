@@ -58,6 +58,21 @@ export const useHeaderMenuStyles = createStyles((theme, { show }: useHeaderMenuS
     justifyContent: 'flex-end',
   },
 
+  headerHomeLink: {
+    textDecoration: 'none',
+    cursor: 'pointer',
+    '&:hover': {
+      h1: {
+        // "WRECK"
+        color: theme.colors.offWhite,
+        span: {
+          // "SHOP"
+          color: theme.colors.blueLighter,
+        },
+      },
+    },
+  },
+
   menuTitleLinksBox: {
     display: 'flex',
     flexDirection: 'column',

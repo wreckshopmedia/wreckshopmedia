@@ -4,7 +4,9 @@ export const useHomeStyles = createStyles((theme) => ({
   homeOuter: {
     height: '100%',
     overflow: 'hidden',
+    
   },
+
 
   homeCardsWrapper: {
     display: 'flex',

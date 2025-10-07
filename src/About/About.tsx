@@ -10,10 +10,10 @@ export function About() {
     <Box id="about">
       <PageHelmet title="About" description="Learn more about our company" />
       <Box mt="80px" className={cx(globalClasses.page, classes.aboutOuter)}>
-        <Title order={1} ta="center">
-          ABOUT THE FLERP
+        <Title order={1}>
+          ABOUT<br />THE FLERP
         </Title>
-        <Title order={4} ta="center">
+        <Title order={4}>
           Little Subtitle Of Stuff and Craps
         </Title>
 
