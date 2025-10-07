@@ -1,97 +1,93 @@
 import { createStyles } from '@mantine/core';
 
 interface useHeaderMenuStylesProps {
-  isAtTop: boolean;
   show?: boolean;
 }
 
-export const useHeaderMenuStyles = createStyles(
-  (theme, { isAtTop, show }: useHeaderMenuStylesProps) => ({
-    headerOuter: {
-      background: theme.colors.eerieBlack,
-      backdropFilter: isAtTop ? 'none' : 'blur(3px)',
-      border: 'none',
-      transition: 'all 250ms ease-out',
-      boxShadow: isAtTop ? 'none' : '0 4px 20px #00000016',
-      transform: show ? 'translateY(0)' : 'translateY(calc(-10dvh + -10dvw))',
-      rotate: '7deg',
-      zIndex: 100,
-      left: '50%',
-      transformOrigin: 'top',
-      transformStyle: 'preserve-3d',
-      translate: '-50% 0',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'flex-end',
+export const useHeaderMenuStyles = createStyles((theme, { show }: useHeaderMenuStylesProps) => ({
+  headerOuter: {
+    background: theme.colors.eerieBlack,
+    border: show ? 'none' : 'none',
+    transition: 'all 250ms ease-out',
 
-      // -------- WIDTH --------- //
-      [theme.other.mq.customMax(900)]: {
-        rotate: '6deg',
-      },
-      [theme.other.mq.customMax(500)]: {
-        rotate: '0deg',
-      },
+    transform: show ? 'translateY(0)' : 'translateY(calc(-10dvh + -10dvw))',
+    rotate: '7deg',
+    zIndex: 100,
+    left: '50%',
+    transformOrigin: 'top',
+    transformStyle: 'preserve-3d',
+    translate: '-50% 0',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
 
-      // ------- HEIGHT -------- //
-      [theme.other.mq.shortScreen(800)]: {
-        rotate: '4deg',
-        height: 'clamp(60px, calc(40px + 12dvh), 120px)',
-      },
-      [theme.other.mq.shortScreen(600)]: {
-        rotate: '0deg',
-      },
-
-      // ------- COMBO! iPad First, hamburger short menu -------- //
-
-      [theme.other.mq.iPhone15ProMax]: {
-        rotate: '0deg',
-        height: '60px',
-      },
+    // -------- WIDTH --------- //
+    [theme.other.mq.customMax(900)]: {
+      rotate: '6deg',
+    },
+    [theme.other.mq.customMax(500)]: {
+      rotate: '0deg',
     },
 
-    headerMenuInner: {
-      marginInline: '20px',
+    // ------- HEIGHT -------- //
+    [theme.other.mq.shortScreen(800)]: {
+      rotate: '4deg',
+      height: 'clamp(60px, calc(40px + 12dvh), 120px)',
+    },
+    [theme.other.mq.shortScreen(600)]: {
+      rotate: '0deg',
     },
 
-    headerMenu: {
-      height: '100%',
-      display: 'flex',
-      flexDirection: 'row',
-      alignItems: 'center',
-      justifyContent: 'flex-end',
-    },
+    // ------- COMBO! iPad First, hamburger short menu -------- //
 
-    menuTitleLinksBox: {
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'space-around',
-      height: '100%',
+    [theme.other.mq.iPhone15ProMax]: {
+      rotate: '0deg',
+      height: '60px',
     },
+  },
 
-    headerMenuOptionsWrapper: {
-      display: 'flex',
-      flexDirection: 'row',
-      alignItems: 'flex-end',
-      justifyContent: 'space-between',
-      width: '100%',
-      marginInline: 'min(2em, 1em + 2cqi)',
-      height: '90%',
-    },
+  headerMenuInner: {
+    marginInline: '20px',
+  },
 
-    menuItem: {
-      textTransform: 'uppercase',
-      background: 'transparent',
-      fontFamily: '"Zain", sans-serif',
-      fontSize: 'clamp(1.125rem, 2.75cqi, 1.75rem)',
-      fontWeight: 600,
-      lineHeight: '1.125em',
-      margin: 0,
-      color: theme.colors.offWhite,
-      textDecoration: 'none',
-      '&.active': {
-        color: theme.colors.offWhiteDarker,
-      },
+  headerMenu: {
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+  },
+
+  menuTitleLinksBox: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'space-around',
+    height: '100%',
+  },
+
+  headerMenuOptionsWrapper: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'flex-end',
+    justifyContent: 'space-between',
+    width: '100%',
+    marginInline: 'min(2em, 1em + 2cqi)',
+    height: '90%',
+  },
+
+  menuItem: {
+    textTransform: 'uppercase',
+    background: 'transparent',
+    fontFamily: '"Zain", sans-serif',
+    fontSize: 'clamp(1.125rem, 2.75cqi, 1.75rem)',
+    fontWeight: 600,
+    lineHeight: '1.125em',
+    margin: 0,
+    color: theme.colors.offWhite,
+    textDecoration: 'none',
+    '&.active': {
+      color: theme.colors.offWhiteDarker,
     },
-  })
-);
+  },
+}));
