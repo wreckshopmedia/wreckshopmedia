@@ -18,6 +18,7 @@ export const useIntroStyles = createStyles((theme) => ({
     textDecoration: 'none',
     display: 'flex',
     flexDirection: 'column',
+    marginInline: 'auto',
     alignItems: 'center',
     justifyContent: 'center',
     cursor: 'pointer',

@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { Box } from '@mantine/core';
+import { Box, Image } from '@mantine/core';
 import { Outlet } from 'react-router-dom';
 import { HeaderMenu, Footer } from '..';
 import { useLayoutStyles } from '.';
+import DotMask from '../assets/dot-mask.svg';
 
 export function Layout() {
   const { classes } = useLayoutStyles();
@@ -24,6 +25,8 @@ export function Layout() {
       <Box component="main" className={classes.main} id="main-content">
         <Outlet />
       </Box>
+      <Image src={DotMask} className={classes.dotMaskTop} /> 
+      <Image src={DotMask} className={classes.dotMaskBottom} /> 
       <Footer show={showBars} />
     </Box>
   );

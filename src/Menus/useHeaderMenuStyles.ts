@@ -64,10 +64,10 @@ export const useHeaderMenuStyles = createStyles((theme, { show }: useHeaderMenuS
     '&:hover': {
       h1: {
         // "WRECK"
-        color: theme.colors.offWhite,
+        // color: theme.colors.offWhite,
         span: {
           // "SHOP"
-          color: theme.colors.blueLighter,
+          // color: theme.colors.blueLighter,
         },
       },
     },
@@ -102,7 +102,7 @@ export const useHeaderMenuStyles = createStyles((theme, { show }: useHeaderMenuS
     color: theme.colors.offWhite,
     textDecoration: 'none',
     '&.active': {
-      color: theme.colors.offWhiteDarker,
+      color: theme.colors.peach,
     },
   },
 }));

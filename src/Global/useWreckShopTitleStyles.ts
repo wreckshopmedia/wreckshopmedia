@@ -6,11 +6,23 @@ export const useWreckShopTitleStyles = createStyles(
   (theme, { wreckColor, shopColor }: WreckShopTitleProps) => ({
     wreckText: {
       ...TITLE_TEXT_STYLES, // UPDATE IN THEME FILE
-      color: wreckColor || theme.colors.yellow,
+      color: wreckColor,
+
+    },
+
+    textBase: {
+      ...TITLE_TEXT_STYLES, // UPDATE IN THEME FILE
+      color: theme.colors.yellowDark,
+      opacity: 0.7,
+      span: {
+        color: theme.colors.blueDark,
+
+      },
     },
 
     shopText: {
-      color: shopColor || theme.colors.blue,
+      ...TITLE_TEXT_STYLES, // UPDATE IN THEME FILE
+      color: shopColor,
       fontSize: 'inherit',
       fontWeight: 'inherit',
       fontFamily: 'inherit',
