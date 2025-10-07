@@ -6,25 +6,31 @@ import chroma from 'chroma-js';
 // --------------- IF YOU UPDATE, UPDATE THESE! --------------- //
 // ------------------------------------------------------------ //
 
-
 export const EERIE_BLACK: string = '#222725';
 export const YELLOW: string = '#F5E663';
 export const BLUE: string = '#0E79B2';
 export const PEACH: string = '#F68E5F';
 export const OFF_WHITE: string = '#FAFAFF';
 
-export type ThemeColors = "eerieBlack" | "yellow" | "blue" | "peach" | "offWhite";
+export type ThemeColors = 'eerieBlack' | 'yellow' | 'blue' | 'peach' | 'offWhite';
 // todo do I need to add variations? Time will tell...
 
 export const HEADER_HEIGHT =
   'clamp(70px, min(calc(calc(50px + 4cqi) + 10dvh), calc(55px + 7cqi)), 140px)';
 
+// footer should be thicker on big screens and down to ab out 60px on small screens
+export const FOOTER_HEIGHT =
+  'clamp(50px, min(calc(calc(20px + 2cqi) + 5dvh), calc(20px + 4cqi)), 70px)';
+
+// WIDTH BREAKPOINTS
 export const BASE = 0;
 export const XS = 500;
 export const SM = 768;
 export const MD = 991;
-export const LG = 1200;
-export const XL = 1400;
+// ☝️ mantine | 👇 custom
+export const LG = 1280;
+export const XL = 1536;
+export const XXL = 1920;
 
 export const TITLE_TEXT_STYLES = {
   fontFamily: '"Lilita One", sans-serif',
@@ -131,31 +137,56 @@ export const theme: MantineThemeOverride = {
   fontFamily: '"Zain", sans-serif',
 
   breakpoints: {
+    base: `${BASE}px`,
     xs: `${XS}px`,
     sm: `${SM}px`,
     md: `${MD}px`,
     lg: `${LG}px`,
     xl: `${XL}px`,
+    xxl: `${XXL}px`,
   },
 
   other: {
     inlinePadding: INLINE_PADDING,
     headerHeight: HEADER_HEIGHT,
-    sm: SM,
-    lg: LG,
-    xl: XL,
     base: BASE,
     xs: XS,
+    sm: SM,
     md: MD,
+    lg: LG,
+    xl: XL,
+    xxl: XXL,
+
+    // CUSTOM MEDIA QUERIES - use like: [theme.other.mq.tabletPortrait]
     mq: {
       customMax: (max: number) => `@media (max-width: ${max}px)`,
       customMin: (min: number) => `@media (min-width: ${min}px)`,
-      mobile: `@media (max-width: ${SM}px)`,
-      desktop: `@media (min-width: ${SM + 1}px)`,
+      megaMonitor: `@media (max-width: ${XL + 1}px)`,
+      desktop: `@media (max-width: ${XL}px)`,
+      tabletLandscape: `@media (max-width: ${MD}px)`,
+      tabletPortrait: `@media (max-width: ${SM}px)`,
+      mobile: `@media (max-width: ${XS}px)`,
+
+      shortScreen: (max: number = 700) => `@media (max-height: ${max}px)`,
+      tallScreen: (min: number = 900) => `@media (min-height: ${min}px)`,
+
+      // ------- DEVICES - COMBINED W/H ------- //
+
+      iPhone15Pro: `@media (max-width: 400px) and (max-height: 860px)`,
+      iPhone15ProMax: `@media (max-width: 430px) and (max-height: 932px)`,
+      iPadPortrait: `@media (max-width: 768px) and (max-height: 1024px)`,
+      iPadLandscape: `@media (max-width: 1024px) and (max-height: 768px)`,
+
+      // Combined width + height CUSTOM!
+      combine: (maxW: number, maxH: number) =>
+        `@media (max-width: ${maxW}px) and (max-height: ${maxH}px)`,
+
+      portrait: `@media (orientation: portrait)`,
+      landscape: `@media (orientation: landscape)`,
     },
   },
 
-  focusRing: 'auto', // keyboard nav only - no lingering rings on touch devices
+  focusRing: 'auto', // keyboard  nav only - no lingering rings on touch devices
   white: '#FFFFFF',
   black: '#000000',
 };

@@ -1,7 +1,7 @@
 import { createStyles } from '@mantine/core';
 import { TITLE_TEXT_STYLES } from '../theme/theme';
 
-export const useGlobalStyles = createStyles(() => ({
+export const useGlobalStyles = createStyles((theme) => ({
   page: {
     width: '100%',
     minHeight: '100dvh',
@@ -10,8 +10,8 @@ export const useGlobalStyles = createStyles(() => ({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-
     flexGrow: 1,
+    paddingInline: theme.other.inlinePadding, // "CENTER LOCK"
     '& h1, h2, h3,': {
       textWrap: 'balance',
     },
@@ -22,11 +22,15 @@ export const useGlobalStyles = createStyles(() => ({
     p: {
       fontSize: '1.25rem',
       lineHeight: '1.125em',
-      
     },
+  },
+
+  centerLock: {
+    paddingInline: theme.other.inlinePadding,
   },
 
   titleText: {
     ...TITLE_TEXT_STYLES, // UPDATE IN THEME FILE
   },
+
 }));

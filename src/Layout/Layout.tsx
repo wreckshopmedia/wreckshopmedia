@@ -8,21 +8,24 @@ import { useLayoutStyles } from '.';
 export function Layout() {
   const { classes } = useLayoutStyles();
   const location = useLocation();
-  const [showHeader, setShowHeader] = useState(false);
+  const [showBars, setShowBars] = useState(false);
+  // const [entering, setEntering] = useState(false);
+
+
 
   useEffect(() => {
     // Show header only for these routes
     const visibleRoutes = ['/home', '/about', '/services', '/projects', '/contact'];
-    setShowHeader(visibleRoutes.includes(location.pathname));
+    setShowBars(visibleRoutes.includes(location.pathname));
   }, [location.pathname]);
 
   return (
     <Box className={classes.layout} id="layout-outer">
-      <HeaderMenu show={showHeader} />
+      <HeaderMenu show={showBars} />
       <Box component="main" className={classes.main} id="main-content">
         <Outlet />
       </Box>
-      <Footer />
+      <Footer show={showBars} />
     </Box>
   );
 }

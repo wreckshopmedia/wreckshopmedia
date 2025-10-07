@@ -8,7 +8,7 @@ export const useIntroStyles = createStyles((theme) => ({
     
 
     svg: {
-      [theme.other.mq.mobile]: {
+      [theme.other.mq.tabletPortrait]: {
         width: '120px',
       },
     },
