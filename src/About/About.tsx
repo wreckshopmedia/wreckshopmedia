@@ -1,4 +1,4 @@
-import { Box, Title, Text } from '@mantine/core';
+import { Box, Title, Text, Flex } from '@mantine/core';
 import { useAboutStyles } from './useAboutStyles';
 import { PageHelmet, useGlobalStyles } from '../Global';
 import { SkullLogo } from '../SkullLogo/SkullLogo';
@@ -10,14 +10,22 @@ export function About() {
     <Box id="about">
       <PageHelmet title="About" description="Learn more about our company" />
       <Box mt="80px" className={cx(globalClasses.page, classes.aboutOuter)}>
-        <Title order={1} ta="center">
-          ABOUT THE FLERP
-        </Title>
-        <Title order={4} ta="center">
-          Little Subtitle Of Stuff and Craps
-        </Title>
-
-        <SkullLogo size="200px" />
+        <Flex justify="flex-start" align="flex-end" gap="min(1rem, 4cqi)">
+          <SkullLogo size="130px" />
+          <Flex
+            h="100%"
+            direction="column"
+            align="flex-start"
+            justify="center"
+          >
+            <Title order={1}>
+              ABOUT
+              <br />
+              THE FLERPLE
+            </Title>
+            <Title order={4}>Little Subtitle Of Stuff and Craps</Title>
+          </Flex>
+        </Flex>
 
         <Text component="p">
           This is some paragraph text that describes Wreck Shop Media LLC. We are a small web

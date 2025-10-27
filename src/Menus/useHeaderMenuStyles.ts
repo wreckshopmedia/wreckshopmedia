@@ -1,20 +1,17 @@
 import { createStyles } from '@mantine/core';
 
 interface useHeaderMenuStylesProps {
-  isAtTop: boolean;
   show?: boolean;
 }
 
-export const useHeaderMenuStyles = createStyles((theme, { isAtTop, show }: useHeaderMenuStylesProps) => ({
+export const useHeaderMenuStyles = createStyles((theme, { show }: useHeaderMenuStylesProps) => ({
   headerOuter: {
     background: theme.colors.eerieBlack,
-    backdropFilter: isAtTop ? 'none' : 'blur(3px)',
-    opacity: show ? 1 : 0,
-    border: 'none',
-    transition: 'box-shadow 200ms ease-out, background 200ms ease-out 100ms, transform 300ms ease-out, opacity 400ms ease-out, backdrop-filter 200ms ease-out',
-    boxShadow: isAtTop ? 'none' : '0 4px 20px #00000016',
-    transform: show ? 'translateY(0)' : 'translateY(-100%)',
-    rotate: '8deg',
+    border: show ? 'none' : 'none',
+    transition: 'all 250ms ease-out',
+
+    transform: show ? 'translateY(0)' : 'translateY(calc(-10dvh + -10dvw))',
+    rotate: '7deg',
     zIndex: 100,
     left: '50%',
     transformOrigin: 'top',
@@ -23,25 +20,34 @@ export const useHeaderMenuStyles = createStyles((theme, { isAtTop, show }: useHe
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'flex-end',
-    [theme.other.mq.customMax(1200)]: {
-      rotate: '7deg',
-    },
+
+    // -------- WIDTH --------- //
     [theme.other.mq.customMax(900)]: {
       rotate: '6deg',
     },
     [theme.other.mq.customMax(500)]: {
       rotate: '0deg',
     },
-    
+
+    // ------- HEIGHT -------- //
+    [theme.other.mq.shortScreen(800)]: {
+      rotate: '4deg',
+      height: 'clamp(60px, calc(40px + 12dvh), 120px)',
+    },
+    [theme.other.mq.shortScreen(600)]: {
+      rotate: '0deg',
+    },
+
+    // ------- COMBO! iPad First, hamburger short menu -------- //
+
+    [theme.other.mq.iPhone15ProMax]: {
+      rotate: '0deg',
+      height: '60px',
+    },
   },
 
   headerMenuInner: {
-    paddingInline: theme.other.inlinePadding,
-    marginInline: 'min(20px 2cqi)',
-    [theme.other.mq.mobile]: {
-      marginInline: '25px', // hamburger breakpoint!
-    },
-    
+    marginInline: '20px',
   },
 
   headerMenu: {
@@ -50,6 +56,21 @@ export const useHeaderMenuStyles = createStyles((theme, { isAtTop, show }: useHe
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'flex-end',
+  },
+
+  headerHomeLink: {
+    textDecoration: 'none',
+    cursor: 'pointer',
+    '&:hover': {
+      h1: {
+        // "WRECK"
+        // color: theme.colors.offWhite,
+        span: {
+          // "SHOP"
+          // color: theme.colors.blueLighter,
+        },
+      },
+    },
   },
 
   menuTitleLinksBox: {
@@ -81,8 +102,7 @@ export const useHeaderMenuStyles = createStyles((theme, { isAtTop, show }: useHe
     color: theme.colors.offWhite,
     textDecoration: 'none',
     '&.active': {
-      color: theme.colors.offWhiteDarker,
-
-    },  
+      color: theme.colors.peach,
+    },
   },
 }));

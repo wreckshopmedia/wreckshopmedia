@@ -8,7 +8,7 @@ export const useIntroStyles = createStyles((theme) => ({
     
 
     svg: {
-      [theme.other.mq.mobile]: {
+      [theme.other.mq.tabletPortrait]: {
         width: '120px',
       },
     },
@@ -18,6 +18,7 @@ export const useIntroStyles = createStyles((theme) => ({
     textDecoration: 'none',
     display: 'flex',
     flexDirection: 'column',
+    marginInline: 'auto',
     alignItems: 'center',
     justifyContent: 'center',
     cursor: 'pointer',
