@@ -26,7 +26,7 @@ export function WreckShopTitle(props: WreckShopTitleProps) {
       case 'xxs':
         return 'clamp(14px, 2cqi, 18px)';
       case 'xs':
-        return 'clamp(1rem, 3cqi, 1.5rem)';
+        return 'clamp(1rem,  3cqi, 1.5rem)';
       case 'sm':
         return 'clamp(1.5rem, 4cqi, 2rem)';
       case 'md':
