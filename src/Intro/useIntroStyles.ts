@@ -2,10 +2,7 @@ import { createStyles } from '@mantine/styles';
 
 export const useIntroStyles = createStyles((theme) => ({
   introOuter: {
-    
-    
     overflow: 'hidden',
-    
 
     svg: {
       [theme.other.mq.tabletPortrait]: {
@@ -24,8 +21,4 @@ export const useIntroStyles = createStyles((theme) => ({
     cursor: 'pointer',
     gap: 'min(0.5rem, 2cqi)',
   },
-
-
-   
-  
 }));

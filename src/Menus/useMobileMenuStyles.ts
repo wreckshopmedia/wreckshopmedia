@@ -64,16 +64,6 @@ export const useMobileMenuStyles = createStyles((theme) => ({
     },
     '&:hover': {
       transform: 'translateX(30px)',
-      h1: {
-        // "WRECK"
-        color: theme.colors.blue,
-        transform: 'translateX(10px)',
-        span: {
-          // "SHOP"
-          color: theme.colors.yellow,
-          transform: 'translateX(10px)',
-        },
-      },
     },
   },
 
@@ -85,7 +75,6 @@ export const useMobileMenuStyles = createStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'flex-start',
     lineHeight: '1.35em',
-
     textDecoration: 'none',
     borderRadius: '8px',
     fontWeight: 800,
@@ -96,8 +85,7 @@ export const useMobileMenuStyles = createStyles((theme) => ({
     fontFamily: '"Zain", sans-serif',
 
     '&.active': {
-      color: theme.colors.offWhiteDarker,
-      backgroundColor: `${theme.colors.blueDark}60`,
+      color: theme.colors.orange,
       pointerEvents: 'none',
       cursor: 'default',
     },
