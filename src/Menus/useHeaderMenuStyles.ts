@@ -11,7 +11,6 @@ export const useHeaderMenuStyles = createStyles(
       background: isMobile ? 'transparent' : theme.colors.eerieBlack,
       border: show ? 'none' : 'none',
       transition: 'all 250ms ease-out',
-
       transform: show ? 'translateY(0)' : 'translateY(calc(-10dvh + -10dvw))',
       rotate: isMobile ? '0deg' : '7deg',
       zIndex: 100,
@@ -34,10 +33,11 @@ export const useHeaderMenuStyles = createStyles(
       // ------- HEIGHT -------- //
       [theme.other.mq.shortScreen(800)]: {
         rotate: isMobile ? '0deg' : '4deg',
-        height: 'clamp(60px, calc(40px + 12dvh), 120px)',
+        // height: 'clamp(60px, calc(40px + 12dvh), 120px)',
       },
       [theme.other.mq.shortScreen(600)]: {
         rotate: '0deg',
+        minHeight: isMobile ? 'unset' : '110px',
       },
 
       // ------- COMBO! iPad First, hamburger short menu -------- //
@@ -50,8 +50,8 @@ export const useHeaderMenuStyles = createStyles(
     },
 
     headerMenuInner: {
-      // marginInline: isMobile ? 0 : '20px',
-      paddingInline: isMobile ? '28px' : theme.other.inlinePadding,
+      marginInline: isMobile ? 0 : '20px',
+      paddingInline: isMobile ? '12px' : theme.other.inlinePadding,
     },
 
     headerMenu: {
@@ -62,19 +62,12 @@ export const useHeaderMenuStyles = createStyles(
       justifyContent: 'flex-end',
     },
 
+
+
     headerHomeLink: {
       textDecoration: 'none',
       cursor: 'pointer',
-      '&:hover': {
-        h1: {
-          // "WRECK"
-          // color: theme.colors.offWhite,
-          span: {
-            // "SHOP"
-            // color: theme.colors.blueLighter,
-          },
-        },
-      },
+      
     },
 
     menuTitleLinksBox: {
@@ -92,14 +85,14 @@ export const useHeaderMenuStyles = createStyles(
       justifyContent: 'space-between',
       width: '100%',
       marginInline: 'min(2em, 1em + 2cqi)',
-      height: '90%',
+      // height: '90%', // > REVISIT
     },
 
     menuItem: {
       textTransform: 'uppercase',
       background: 'transparent',
       fontFamily: '"Zain", sans-serif',
-      fontSize: 'clamp(1.125rem, 2.75cqi, 1.75rem)',
+      fontSize: 'clamp(1.125rem, 2.25cqi, 1.5rem)',
       fontWeight: 600,
       lineHeight: '1.125em',
       margin: 0,

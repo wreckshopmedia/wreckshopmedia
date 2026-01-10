@@ -4,13 +4,12 @@ import { type FooterProps } from './Footer';
 export const useFooterStyles = createStyles((theme, { show = true }: FooterProps) => ({
   footerOuter: {
     transform: show ? 'translateY(0)' : 'translateY(calc(7dvh + 7dvw))',
-    // transition: 'rotate 200ms ease-out, transform 300ms ease-out, backdrop-filter 200ms ease-out',
     transition: 'all 250ms ease-out, transform 300ms ease-out',
     background: theme.colors.eerieBlack,
     width: '100dvw',
     left: '50%',
     translate: '-50% 0',
-    bottom: 0,
+    bottom: '5px',
     position: 'fixed',
     zIndex: 100,
     transformOrigin: 'bottom',
@@ -22,7 +21,7 @@ export const useFooterStyles = createStyles((theme, { show = true }: FooterProps
 
     h6: {
       fontFamily: '"Zain", sans-serif',
-      fontSize: 'clamp(13px, 2.5cqi, 16px)',
+      fontSize: 'clamp(12px, 1.6cqi, 16px)',
       fontWeight: 400,
       letterSpacing: '0.05em',
       marginBlock: 0,
@@ -37,9 +36,14 @@ export const useFooterStyles = createStyles((theme, { show = true }: FooterProps
     // -------- WIDTH --------- //
     [theme.other.mq.customMax(900)]: {
       rotate: '6deg',
+      bottom: '2vw',
     },
-    [theme.other.mq.customMax(500)]: {
+    [theme.other.mq.customMax(700)]: {
+      rotate: '5deg',
+    },
+    [theme.other.mq.customMax(550)]: {
       rotate: '0deg',
+      bottom: 0,
     },
 
     // ------- HEIGHT -------- //
@@ -50,6 +54,7 @@ export const useFooterStyles = createStyles((theme, { show = true }: FooterProps
     },
     [theme.other.mq.shortScreen(700)]: {
       rotate: '0deg',
+      bottom: 0,
       translate: 0,
       left: 0,
     },
@@ -71,15 +76,20 @@ export const useFooterStyles = createStyles((theme, { show = true }: FooterProps
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'flex-start',
-    [theme.other.mq.customMax(500)]: {
+    [theme.other.mq.sm]: {
+      paddingLeft: '6vw',
+    },
+    [theme.other.mq.customMax(550)]: {
       textAlign: 'center',
       justifyContent: 'center',
       marginInline: 'auto',
+      paddingLeft: 0,
     },
     [theme.other.mq.shortScreen(700)]: {
       textAlign: 'center',
       justifyContent: 'center',
       marginInline: 'auto',
+      paddingLeft: 0,
     },
   },
 }));

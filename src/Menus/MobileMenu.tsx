@@ -65,7 +65,7 @@ const logoVariants = {
 
 const sidebarVariants: Variants = {
   open: (height = 1000) => ({
-    clipPath: `circle(${height * 2 + 200}px at calc(100% - 40px) 40px)`,
+    clipPath: `circle(${height * 2 + 200}px at calc(100% - 40px) 35px)`,
     transition: {
       type: 'spring',
       stiffness: 20,
@@ -73,7 +73,7 @@ const sidebarVariants: Variants = {
     },
   }),
   closed: {
-    clipPath: 'circle(30px at calc(100% - 40px) 40px)',
+    clipPath: 'circle(30px at calc(100% - 40px) 35px)',
     transition: {
       delay: 0.2,
       type: 'spring',
@@ -185,9 +185,12 @@ export function MobileMenu() {
         <motion.div className={classes.mobileMenuContent} variants={contentVariants}>
           <Box component="nav" className={classes.mobileMenuNavContainer} id="mobile-drawer-menu">
             <Box className={classes.mobileMenuTextRoutesContainer}>
-              <Link to="/home" onClick={handleClose} className={classes.mobileMenuTitleLink}>
-                <WreckShopTitle size="md" />
-              </Link>
+              <Box className={classes.mobileTopRowLogoCloseButton}>
+                <Link to="/home" onClick={handleClose} className={classes.mobileMenuTitleLink}>
+                  <WreckShopTitle size="md" />
+                </Link>
+              </Box>
+
               <motion.ul className={classes.mobileMenuList} variants={navVariants}>
                 {navLinks.map((link) => {
                   const isActive = location.pathname === `/${link.name}`;

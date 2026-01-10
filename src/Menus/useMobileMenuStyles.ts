@@ -21,7 +21,7 @@ export const useMobileMenuStyles = createStyles((theme) => ({
     top: 0,
     right: 0,
     height: '100dvh',
-    width: 'min(78vw, 320px)',
+    width: 'min(80vw, 315px)',
     maxWidth: '100%',
     zIndex: 1200,
   },
@@ -46,8 +46,9 @@ export const useMobileMenuStyles = createStyles((theme) => ({
     justifyContent: 'space-between',
     alignItems: 'flex-start',
     marginInline: 'auto',
-    height: '97dvh',
-    paddingBlock: '1rem',
+    height: '95dvh',
+    paddingTop: 0, // set text logo to create height to match X
+    paddingBottom: '1rem',
     width: '100%',
     position: 'relative',
     zIndex: 2,
@@ -56,9 +57,14 @@ export const useMobileMenuStyles = createStyles((theme) => ({
 
   mobileMenuTextRoutesContainer: {
     width: '100%',
-    h1: {
-      marginBottom: 'min(2rem, calc(2vh + 1vw))',
-    },
+  },
+
+  // container for title, align with X, 75 tall
+  mobileTopRowLogoCloseButton: {
+    height: '75px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
   },
 
   mobileMenuList: {
@@ -79,12 +85,6 @@ export const useMobileMenuStyles = createStyles((theme) => ({
   mobileMenuTitleLink: {
     textDecoration: 'none',
     cursor: 'pointer',
-    '& h1, & span': {
-      transition: 'color 180ms ease-out, transform 120ms ease-out',
-    },
-    '&:hover': {
-      transform: 'translateX(30px)',
-    },
   },
 
   mobileMenuItem: {
@@ -137,7 +137,7 @@ export const useMobileMenuStyles = createStyles((theme) => ({
     background: 'transparent',
     zIndex: 1300,
     color: theme.colors.offWhiteLighter,
-    paddingInline: 0,
+    padding: '16px',
   },
 
   mobileMenuToggleIcon: {
