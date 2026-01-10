@@ -44,13 +44,14 @@ export const useHeaderMenuStyles = createStyles(
 
       [theme.other.mq.iPhone15ProMax]: {
         rotate: '0deg',
-        height: '60px',
+        // > REVISIT THIS...MAYBE SHRINK UP, but adjust bubble too
+        // height: '60px', 
       },
     },
 
     headerMenuInner: {
-      marginInline: '20px',
-      paddingInline: isMobile ? 0 : theme.other.inlinePadding,
+      // marginInline: isMobile ? 0 : '20px',
+      paddingInline: isMobile ? '28px' : theme.other.inlinePadding,
     },
 
     headerMenu: {

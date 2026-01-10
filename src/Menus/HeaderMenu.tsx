@@ -27,7 +27,7 @@ export function HeaderMenu(props: HeaderMenuProps) {
       className={classes.headerOuter}
     >
       <Box
-        h="95%"
+        h={isMobile ? '100%' : '95%'}
         className={classes.headerMenuInner}
         id="header-menu"
       >

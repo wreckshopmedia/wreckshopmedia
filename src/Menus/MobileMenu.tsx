@@ -73,7 +73,7 @@ const sidebarVariants: Variants = {
     },
   }),
   closed: {
-    clipPath: 'circle(28px at calc(100% - 40px) 40px)',
+    clipPath: 'circle(30px at calc(100% - 40px) 40px)',
     transition: {
       delay: 0.2,
       type: 'spring',
@@ -128,7 +128,7 @@ export function MobileMenu() {
 
   return (
     <Box className={classes.mobileMenuOuter} id="mobile-menu">
-      <Box className={classes.mobileMenuHeader}>
+      <Box className={classes.mobileMenuHeader} id="mobile-menu-header">
         <button
           type="button"
           onClick={handleToggle}
@@ -147,12 +147,12 @@ export function MobileMenu() {
           >
             <Path
               variants={{
-                closed: { d: 'M 2 2.5 L 20 2.5' },
-                open: { d: 'M 3 16.5 L 17 2.5' },
+                closed: { d: 'M 1.5 2.5 L 21.5 2.5' },
+                open: { d: 'M 2.5 19.5 L 20.5 3.5' },
               }}
             />
             <Path
-              d="M 2 9.423 L 20 9.423"
+              d="M 1.5 11.5 L 21.5 11.5"
               variants={{
                 closed: { opacity: 1 },
                 open: { opacity: 0 },
@@ -161,8 +161,8 @@ export function MobileMenu() {
             />
             <Path
               variants={{
-                closed: { d: 'M 2 16.346 L 20 16.346' },
-                open: { d: 'M 3 2.5 L 17 16.346' },
+                closed: { d: 'M 1.5 20.5 L 21.5 20.5' },
+                open: { d: 'M 2.5 3.5 L 20.5 19.5' },
               }}
             />
           </motion.svg>
@@ -186,7 +186,7 @@ export function MobileMenu() {
           <Box component="nav" className={classes.mobileMenuNavContainer} id="mobile-drawer-menu">
             <Box className={classes.mobileMenuTextRoutesContainer}>
               <Link to="/home" onClick={handleClose} className={classes.mobileMenuTitleLink}>
-                <WreckShopTitle size="lg" />
+                <WreckShopTitle size="md" />
               </Link>
               <motion.ul className={classes.mobileMenuList} variants={navVariants}>
                 {navLinks.map((link) => {

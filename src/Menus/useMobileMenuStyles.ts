@@ -133,17 +133,11 @@ export const useMobileMenuStyles = createStyles((theme) => ({
     MozUserSelect: 'none',
     cursor: 'pointer',
     position: 'relative',
-    width: '50px',
-    height: '50px',
     borderRadius: '50%',
     background: 'transparent',
     zIndex: 1300,
     color: theme.colors.offWhiteLighter,
-    transition: 'transform 150ms ease, color 150ms ease',
-    '&:hover': {
-      transform: 'scale(1.05)',
-      color: theme.colors.offWhiteDark,
-    },
+    paddingInline: 0,
   },
 
   mobileMenuToggleIcon: {
