@@ -38,11 +38,6 @@ export const useHomeStyles = createStyles((theme) => ({
     cursor: 'pointer',
     transformOrigin: 'center',
     transition: 'transform 150ms ease, box-shadow 150ms ease, background 150ms ease',
-
-    '&:hover': {
-      transform: 'scale(1.05)',
-      boxShadow: theme.shadows.xl,
-    },
   },
   
   
@@ -52,10 +47,5 @@ export const useHomeStyles = createStyles((theme) => ({
     fontSize: '22cqi',
     fontWeight: 700,
     letterSpacing: '0.03em',
-    '&[data-card-name="contact"]': {
-      // idea do this stuff
-      // fontSize: '27cqi',
-    },
-    
   },
 }));
