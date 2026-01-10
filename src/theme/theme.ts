@@ -13,14 +13,13 @@ export const PEACH: string = '#F68E5F';
 export const OFF_WHITE: string = '#FAFAFF';
 
 export type ThemeColors = 'eerieBlack' | 'yellow' | 'blue' | 'peach' | 'offWhite';
-// todo do I need to add variations? Time will tell...
 
 export const HEADER_HEIGHT =
-  'clamp(70px, min(calc(calc(50px + 4cqi) + 10dvh), calc(55px + 7cqi)), 140px)';
+  'clamp(70px, min(calc(calc(45px + 3.75cqi) + 9dvh), calc(50px + 7cqi)), 120px)';
 
 // footer should be thicker on big screens and down to ab out 60px on small screens
 export const FOOTER_HEIGHT =
-  'clamp(50px, min(calc(calc(20px + 2cqi) + 5dvh), calc(20px + 4cqi)), 70px)';
+  'clamp(47px, min(calc(calc(17px + 2cqi) + 4.5dvh), calc(17px + 3.75cqi)), 65px)';
 
 // WIDTH BREAKPOINTS
 export const BASE = 0;

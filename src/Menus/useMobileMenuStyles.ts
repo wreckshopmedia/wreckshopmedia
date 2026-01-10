@@ -2,40 +2,42 @@ import { createStyles } from '@mantine/core';
 
 export const useMobileMenuStyles = createStyles((theme) => ({
   mobileMenuOuter: {
+    position: 'relative',
+    zIndex: 50,
+    width: '100%',
+  },
+
+  mobileMenuHeader: {
     display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
     alignItems: 'center',
+    justifyContent: 'flex-end',
+    width: '100%',
+    zIndex: 1300,
+    position: 'relative',
   },
 
-  hamburger: {
-    backgroundColor: 'transparent',
-    border: 0,
-    cursor: 'pointer',
-
-    svg: {
-      '& *': {
-        fill: theme.colors.offWhiteLighter,
-      },
-    },
-    '&:hover': {
-      svg: {
-        '& *': {
-          fill: theme.colors.offWhiteDark,
-        },
-      },
-    },
+  mobileMenuNav: {
+    position: 'fixed',
+    top: 0,
+    right: 0,
+    height: '100dvh',
+    width: 'min(80vw, 315px)',
+    maxWidth: '100%',
+    zIndex: 1200,
   },
 
-  drawer: {
-    section: {
-      position: 'relative',
-      zIndex: 1000,
-      backgroundColor: theme.colors.eerieBlack,
-    },
-    '& .mantine-Drawer-body': {
-      paddingInline: '1.5rem',
-    },
+  // BLACK BUBBLE, GROWS INTO MENU, BLACK
+  mobileMenuBackground: {
+    position: 'absolute',
+    inset: 0,
+    backgroundColor: theme.colors.eerieBlack,
+    borderRadius: '18px 0 0 18px',
+  },
+
+  mobileMenuContent: {
+    position: 'relative',
+    zIndex: 2,
+    height: '100%',
   },
 
   mobileMenuNavContainer: {
@@ -44,37 +46,45 @@ export const useMobileMenuStyles = createStyles((theme) => ({
     justifyContent: 'space-between',
     alignItems: 'flex-start',
     marginInline: 'auto',
-    height: '97dvh',
-    paddingBlock: '1rem',
+    height: '95dvh',
+    paddingTop: 0, // set text logo to create height to match X
+    paddingBottom: '1rem',
     width: '100%',
+    position: 'relative',
+    zIndex: 2,
+    paddingInline: '1.5rem',
   },
 
   mobileMenuTextRoutesContainer: {
     width: '100%',
-    h1: {
-      marginBottom: 'min(2rem, calc(2vh + 1vw))',
-    },
+  },
+
+  // container for title, align with X, 75 tall
+  mobileTopRowLogoCloseButton: {
+    height: '75px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+  },
+
+  mobileMenuList: {
+    listStyle: 'none',
+    padding: 0,
+    margin: 0,
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '0.35rem',
+  },
+
+  mobileMenuListItem: {
+    listStyle: 'none',
+    padding: 0,
+    margin: 0,
   },
 
   mobileMenuTitleLink: {
     textDecoration: 'none',
     cursor: 'pointer',
-    '& h1, & span': {
-      transition: 'color 180ms ease-out, transform 120ms ease-out',
-    },
-    '&:hover': {
-      transform: 'translateX(30px)',
-      h1: {
-        // "WRECK"
-        color: theme.colors.blue,
-        transform: 'translateX(10px)',
-        span: {
-          // "SHOP"
-          color: theme.colors.yellow,
-          transform: 'translateX(10px)',
-        },
-      },
-    },
   },
 
   mobileMenuItem: {
@@ -85,7 +95,6 @@ export const useMobileMenuStyles = createStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'flex-start',
     lineHeight: '1.35em',
-
     textDecoration: 'none',
     borderRadius: '8px',
     fontWeight: 800,
@@ -96,8 +105,7 @@ export const useMobileMenuStyles = createStyles((theme) => ({
     fontFamily: '"Zain", sans-serif',
 
     '&.active': {
-      color: theme.colors.offWhiteDarker,
-      backgroundColor: `${theme.colors.blueDark}60`,
+      color: theme.colors.yellow,
       pointerEvents: 'none',
       cursor: 'default',
     },
@@ -109,6 +117,36 @@ export const useMobileMenuStyles = createStyles((theme) => ({
   },
 
   mobileMenuLogoLink: {
-    // bottom skull styles?
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    '& a': {
+      display: 'inline-flex',
+      textDecoration: 'none',
+    },
+  },
+
+  mobileMenuToggle: {
+    outline: 'none',
+    border: 'none',
+    WebkitUserSelect: 'none',
+    MozUserSelect: 'none',
+    cursor: 'pointer',
+    position: 'relative',
+    borderRadius: '50%',
+    background: 'transparent',
+    zIndex: 1300,
+    color: theme.colors.offWhiteLighter,
+    padding: '16px',
+  },
+
+  mobileMenuToggleIcon: {
+    display: 'block',
+    width: '23px',
+    height: '23px',
+    margin: 'auto',
+    '& path': {
+      stroke: 'currentColor',
+    },
   },
 }));
