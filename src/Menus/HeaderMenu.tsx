@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 // import { SkullLogo } from '..';
 import { HEADER_HEIGHT } from '../theme/theme';
 import { useIsMobile } from '../hooks';
-import { navLinks, useGlobalStyles, WreckShopTitle } from '../Global';
+import { navLinks, WreckShopTitle } from '../Global';
 
 export interface HeaderMenuProps {
   show?: boolean;
@@ -13,8 +13,7 @@ export interface HeaderMenuProps {
 export function HeaderMenu(props: HeaderMenuProps) {
   const { show = true } = props;
   const isMobile = useIsMobile();
-  const { classes, cx } = useHeaderMenuStyles({ show });
-  const { classes: globalClasses } = useGlobalStyles();
+  const { classes, cx } = useHeaderMenuStyles({ show, isMobile });
   const location = useLocation();
 
   return (
@@ -22,20 +21,17 @@ export function HeaderMenu(props: HeaderMenuProps) {
 
     <Header
       pos="fixed"
-      w="111dvw"
+      w={isMobile ? '100dvw' : '111dvw'}
       id="header"
       height={isMobile ? '80px' : HEADER_HEIGHT}
       className={classes.headerOuter}
     >
       <Box
         h="95%"
-        className={cx(classes.headerMenuInner, globalClasses.centerLock)}
+        className={classes.headerMenuInner}
         id="header-menu"
       >
         <Box className={classes.headerMenu} m={0} p={0}>
-          {/* <Link id="home-link" to="/home">
-            <SkullLogo size="80px" borderColor="peach"  />
-          </Link> */}
  
           {isMobile ? (
             <MobileMenu />
