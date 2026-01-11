@@ -19,20 +19,6 @@ export const useFooterStyles = createStyles((theme, { show = true }: FooterProps
     justifyContent: 'flex-start',
     rotate: '7deg',
 
-    h6: {
-      fontFamily: '"Zain", sans-serif',
-      fontSize: 'clamp(12px, 1.6cqi, 16px)',
-      fontWeight: 400,
-      letterSpacing: '0.05em',
-      marginBlock: 0,
-      lineHeight: '1em',
-      color: theme.colors.offWhite,
-      textWrap: 'balance',
-      [theme.other.mq.tabletPortrait]: {
-        textAlign: 'center',
-      },
-    },
-
     // -------- WIDTH --------- //
     [theme.other.mq.customMax(900)]: {
       rotate: '6deg',
@@ -67,6 +53,19 @@ export const useFooterStyles = createStyles((theme, { show = true }: FooterProps
       left: 0,
       width: '100%',
       translate: 0,
+    },
+    h6: {
+      fontFamily: '"Zain", sans-serif',
+      fontSize: 'clamp(12px, 1.6cqi, 16px)',
+      fontWeight: 400,
+      letterSpacing: '0.05em',
+      marginBlock: 0,
+      lineHeight: '1em',
+      color: theme.colors.offWhite,
+      textWrap: 'balance',
+      [theme.other.mq.tabletPortrait]: {
+        textAlign: 'center',
+      },
     },
   },
 

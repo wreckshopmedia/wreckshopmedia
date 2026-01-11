@@ -4,7 +4,7 @@ export const useAboutStyles = createStyles((theme) => ({
   aboutOuter: {
     color: theme.colors.offWhite,
 
-    paddingBlock: 'min(2em, 1em + 2cqi)',
+   
 
     svg: {
       marginInline: 'unset',

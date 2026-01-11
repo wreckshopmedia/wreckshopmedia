@@ -21,6 +21,7 @@ export const useHeaderMenuStyles = createStyles(
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'flex-end',
+      top: isMobile ? 0 : 'clamp(-20px, calc(30px + -1dvw + -2dvh), 0px)',
 
       // -------- WIDTH --------- //
       [theme.other.mq.customMax(900)]: {
@@ -33,9 +34,9 @@ export const useHeaderMenuStyles = createStyles(
       // ------- HEIGHT -------- //
       [theme.other.mq.shortScreen(800)]: {
         rotate: isMobile ? '0deg' : '4deg',
-        // height: 'clamp(60px, calc(40px + 12dvh), 120px)',
       },
       [theme.other.mq.shortScreen(600)]: {
+        top: 0,
         rotate: '0deg',
         minHeight: isMobile ? 'unset' : '110px',
       },
@@ -45,7 +46,7 @@ export const useHeaderMenuStyles = createStyles(
       [theme.other.mq.iPhone15ProMax]: {
         rotate: '0deg',
         // > REVISIT THIS...MAYBE SHRINK UP, but adjust bubble too
-        // height: '60px', 
+        // height: '60px',
       },
     },
 
@@ -62,12 +63,9 @@ export const useHeaderMenuStyles = createStyles(
       justifyContent: 'flex-end',
     },
 
-
-
     headerHomeLink: {
       textDecoration: 'none',
       cursor: 'pointer',
-      
     },
 
     menuTitleLinksBox: {
