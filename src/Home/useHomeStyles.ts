@@ -17,7 +17,6 @@ export const useHomeStyles = createStyles((theme) => ({
     flexWrap: 'wrap',
     width: '100%',
     height: '100%',
-    paddingBlock: 'min(2em, 1em + 2cqi)',
   },
 
   homeCard: {

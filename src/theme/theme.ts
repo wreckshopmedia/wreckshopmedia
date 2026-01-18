@@ -19,7 +19,7 @@ export const HEADER_HEIGHT =
 
 // footer should be thicker on big screens and down to ab out 60px on small screens
 export const FOOTER_HEIGHT =
-  'clamp(47px, min(calc(calc(17px + 2cqi) + 4.5dvh), calc(17px + 3.75cqi)), 65px)';
+  'clamp(50px, min(calc(calc(17px + 2cqi) + 4.5dvh), calc(17px + 3.75cqi)), 65px)';
 
 // WIDTH BREAKPOINTS
 export const BASE = 0;
@@ -166,8 +166,8 @@ export const theme: MantineThemeOverride = {
       tabletPortrait: `@media (max-width: ${SM}px)`,
       mobile: `@media (max-width: ${XS}px)`,
 
-      shortScreen: (max: number = 700) => `@media (max-height: ${max}px)`,
       tallScreen: (min: number = 900) => `@media (min-height: ${min}px)`,
+      shortScreen: (max: number = 700) => `@media (max-height: ${max}px)`,
 
       // ------- DEVICES - COMBINED W/H ------- //
 

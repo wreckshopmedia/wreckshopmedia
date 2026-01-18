@@ -19,20 +19,6 @@ export const useFooterStyles = createStyles((theme, { show = true }: FooterProps
     justifyContent: 'flex-start',
     rotate: '7deg',
 
-    h6: {
-      fontFamily: '"Zain", sans-serif',
-      fontSize: 'clamp(12px, 1.6cqi, 16px)',
-      fontWeight: 400,
-      letterSpacing: '0.05em',
-      marginBlock: 0,
-      lineHeight: '1em',
-      color: theme.colors.offWhite,
-      textWrap: 'balance',
-      [theme.other.mq.tabletPortrait]: {
-        textAlign: 'center',
-      },
-    },
-
     // -------- WIDTH --------- //
     [theme.other.mq.customMax(900)]: {
       rotate: '6deg',
@@ -58,6 +44,23 @@ export const useFooterStyles = createStyles((theme, { show = true }: FooterProps
       translate: 0,
       left: 0,
     },
+    [theme.other.mq.shortScreen(575)]: {
+      position: 'relative',
+    },
+    // [theme.other.mq.landscape]: {
+    //   position: 'relative',
+    //   rotate: '0deg',
+    //   bottom: 0,
+    //   translate: 0,
+    //   left: 0,
+    // },
+    [theme.other.mq.extraShortScreen]: {
+      position: 'relative',
+      rotate: '0deg',
+      bottom: 0,
+      translate: 0,
+      left: 0,
+    },
 
     // ------- COMBO! - UNDOCK AND GO TO TRADITIONAL FOOTER MODE! -------- //
     [theme.other.mq.iPhone15ProMax]: {
@@ -68,6 +71,19 @@ export const useFooterStyles = createStyles((theme, { show = true }: FooterProps
       width: '100%',
       translate: 0,
     },
+    h6: {
+      fontFamily: '"Zain", sans-serif',
+      fontSize: 'clamp(12px, 1.6cqi, 16px)',
+      fontWeight: 400,
+      letterSpacing: '0.05em',
+      marginBlock: 0,
+      lineHeight: '1.35em',
+      color: theme.colors.offWhite,
+      textWrap: 'balance',
+      [theme.other.mq.tabletPortrait]: {
+        textAlign: 'center',
+      },
+    },
   },
 
   footerInner: {
@@ -76,20 +92,21 @@ export const useFooterStyles = createStyles((theme, { show = true }: FooterProps
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'flex-start',
+    paddingLeft: 'max(6vw, calc(-1200px + 100vw) / 2)',
     [theme.other.mq.sm]: {
-      paddingLeft: '6vw',
+      paddingLeft: 'calc(3vw + 2rem)',
     },
     [theme.other.mq.customMax(550)]: {
       textAlign: 'center',
       justifyContent: 'center',
       marginInline: 'auto',
-      paddingLeft: 0,
+      paddingInline: '2dvw',
     },
     [theme.other.mq.shortScreen(700)]: {
       textAlign: 'center',
       justifyContent: 'center',
       marginInline: 'auto',
-      paddingLeft: 0,
+      paddingInline: '2dvw',
     },
   },
 }));

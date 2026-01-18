@@ -1,6 +1,5 @@
 import { Box, Title, Text, Flex } from '@mantine/core';
 import { useAboutStyles } from './useAboutStyles';
-import { useIsMobile } from '../hooks';
 import { PageHelmet, useGlobalStyles } from '../Global';
 import { SkullLogo } from '../SkullLogo/SkullLogo';
 
@@ -8,24 +7,21 @@ export function About() {
   const { classes, cx } = useAboutStyles();
   const { classes: globalClasses } = useGlobalStyles();
 
-  const isMobile = useIsMobile();
-
   return (
     <Box id="about">
       <PageHelmet title="About" description="Learn more about our company" />
       <Box
-        mt={isMobile ? '10px' : '80px'} // todo set something universal like this for ALL pages when content complete so they can auto fit and adjust to header, need a footer one also
         className={cx(globalClasses.page, classes.aboutOuter)}
       >
         <Flex justify="flex-start" align="flex-end" gap="min(1rem, 4cqi)">
-          <SkullLogo size="130px" />
+          <SkullLogo size="115px" />
           <Flex h="100%" direction="column" align="flex-start" justify="center">
             <Title order={1}>
-              ABOUT
+              SO HERE'S
               <br />
-              THE FLERPLE
+              THE DANG STORY
             </Title>
-            <Title order={4}>Little Subtitle Of Stuff and Craps</Title>
+            <Title order={4}>and we'll try not to blab</Title>
           </Flex>
         </Flex>
 
