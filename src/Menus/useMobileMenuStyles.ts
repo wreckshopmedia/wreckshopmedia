@@ -21,7 +21,7 @@ export const useMobileMenuStyles = createStyles((theme) => ({
     top: 0,
     right: 0,
     height: '100dvh',
-    width: 'min(80vw, 315px)',
+    width: 'min(70vw, 315px)',
     maxWidth: '100%',
     zIndex: 1200,
   },
@@ -31,7 +31,7 @@ export const useMobileMenuStyles = createStyles((theme) => ({
     position: 'absolute',
     inset: 0,
     backgroundColor: theme.colors.eerieBlack,
-    borderRadius: '18px 0 0 18px',
+    // borderRadius: '18px 0 0 18px', // REVISIT - removed, like without?
   },
 
   mobileMenuContent: {
@@ -46,7 +46,7 @@ export const useMobileMenuStyles = createStyles((theme) => ({
     justifyContent: 'space-between',
     alignItems: 'flex-start',
     marginInline: 'auto',
-    height: '95dvh',
+    height: '92dvh',
     paddingTop: 0, // set text logo to create height to match X
     paddingBottom: '1rem',
     width: '100%',
@@ -80,6 +80,7 @@ export const useMobileMenuStyles = createStyles((theme) => ({
     listStyle: 'none',
     padding: 0,
     margin: 0,
+    transformOrigin: 'left center',
   },
 
   mobileMenuTitleLink: {
@@ -94,13 +95,13 @@ export const useMobileMenuStyles = createStyles((theme) => ({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'flex-start',
-    lineHeight: '1.35em',
+    lineHeight: '1.2em',
     textDecoration: 'none',
     borderRadius: '8px',
     fontWeight: 800,
     letterSpacing: '0.05em',
     color: theme.colors.offWhite,
-    padding: '0.25em 0.15em 0.15em 0.5em',
+    padding: '0.30em 0 0.05em 0.4em',
     fontSize: 'clamp(1.25rem, 7vw, 1.5rem)',
     fontFamily: '"Zain", sans-serif',
 

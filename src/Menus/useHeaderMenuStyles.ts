@@ -90,7 +90,7 @@ export const useHeaderMenuStyles = createStyles(
       textTransform: 'uppercase',
       background: 'transparent',
       fontFamily: '"Zain", sans-serif',
-      fontSize: 'clamp(1.125rem, 2.25cqi, 1.5rem)',
+      fontSize: 'clamp(1.125rem, 2cqi, 1.25rem)',
       fontWeight: 600,
       lineHeight: '1.125em',
       margin: 0,

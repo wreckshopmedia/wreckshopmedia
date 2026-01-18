@@ -73,7 +73,7 @@ const sidebarVariants: Variants = {
     },
   }),
   closed: {
-    clipPath: 'circle(30px at calc(100% - 40px) 35px)',
+    clipPath: 'circle(27px at calc(100% - 40px) 35px)',
     transition: {
       delay: 0.2,
       type: 'spring',
@@ -138,9 +138,9 @@ export function MobileMenu() {
           className={classes.mobileMenuToggle}
         >
           <motion.svg
-            width="23"
-            height="23"
-            viewBox="0 0 23 23"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
             className={classes.mobileMenuToggleIcon}
             initial={false}
             animate={isOpen ? 'open' : 'closed'}
@@ -195,14 +195,17 @@ export function MobileMenu() {
                 {navLinks.map((link) => {
                   const isActive = location.pathname === `/${link.name}`;
 
-                  return (
-                    <motion.li
-                      key={link.name}
-                      className={classes.mobileMenuListItem}
-                      variants={itemVariants}
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.98 }}
-                    >
+                const hoverMotion = isActive ? undefined : { scale: 1.05 };
+                const tapMotion = isActive ? undefined : { scale: 0.98 };
+
+                return (
+                  <motion.li
+                    key={link.name}
+                    className={cx(classes.mobileMenuListItem, isActive && 'active')}
+                    variants={itemVariants}
+                    whileHover={hoverMotion}
+                    whileTap={tapMotion}
+                  >
                       <Text
                         component={Link}
                         to={`/${link.name === 'home' ? '' : link.name}`}

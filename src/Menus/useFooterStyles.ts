@@ -44,6 +44,23 @@ export const useFooterStyles = createStyles((theme, { show = true }: FooterProps
       translate: 0,
       left: 0,
     },
+    [theme.other.mq.shortScreen(575)]: {
+      position: 'relative',
+    },
+    // [theme.other.mq.landscape]: {
+    //   position: 'relative',
+    //   rotate: '0deg',
+    //   bottom: 0,
+    //   translate: 0,
+    //   left: 0,
+    // },
+    [theme.other.mq.extraShortScreen]: {
+      position: 'relative',
+      rotate: '0deg',
+      bottom: 0,
+      translate: 0,
+      left: 0,
+    },
 
     // ------- COMBO! - UNDOCK AND GO TO TRADITIONAL FOOTER MODE! -------- //
     [theme.other.mq.iPhone15ProMax]: {
@@ -60,7 +77,7 @@ export const useFooterStyles = createStyles((theme, { show = true }: FooterProps
       fontWeight: 400,
       letterSpacing: '0.05em',
       marginBlock: 0,
-      lineHeight: '1em',
+      lineHeight: '1.35em',
       color: theme.colors.offWhite,
       textWrap: 'balance',
       [theme.other.mq.tabletPortrait]: {
@@ -75,20 +92,21 @@ export const useFooterStyles = createStyles((theme, { show = true }: FooterProps
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'flex-start',
+    paddingLeft: 'max(6vw, calc(-1200px + 100vw) / 2)',
     [theme.other.mq.sm]: {
-      paddingLeft: '6vw',
+      paddingLeft: 'calc(3vw + 2rem)',
     },
     [theme.other.mq.customMax(550)]: {
       textAlign: 'center',
       justifyContent: 'center',
       marginInline: 'auto',
-      paddingLeft: 0,
+      paddingInline: '2dvw',
     },
     [theme.other.mq.shortScreen(700)]: {
       textAlign: 'center',
       justifyContent: 'center',
       marginInline: 'auto',
-      paddingLeft: 0,
+      paddingInline: '2dvw',
     },
   },
 }));
