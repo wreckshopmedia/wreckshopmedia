@@ -21,7 +21,8 @@ export const useHomeStyles = createStyles((theme) => ({
 
   homeCard: {
     containerType: 'inline-size',
-    background: `color-mix(in srgb, ${theme.colors.eerieBlack}80 30%, ${theme.colors.peach} 70%)`,
+    // background: `color-mix(in srgb, ${theme.colors.eerieBlack}80 30%, ${theme.colors.peach} 70%)`,
+    background: theme.colors.eerieBlack,
     color: theme.colors.offWhite,
     border: 'none',
     width: '20%',

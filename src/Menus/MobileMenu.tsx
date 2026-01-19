@@ -145,12 +145,15 @@ export function MobileMenu() {
             initial={false}
             animate={isOpen ? 'open' : 'closed'}
           >
+            {/* -------------------------------------- */}
+            {/* 3x PATHS - BURGER + X (opacity middle) */}
+            {/* -------------------------------------- */}
             <Path
               variants={{
                 closed: { d: 'M 1.5 2.5 L 21.5 2.5' },
                 open: { d: 'M 2.5 19.5 L 20.5 3.5' },
               }}
-            />
+              />
             <Path
               d="M 1.5 11.5 L 21.5 11.5"
               variants={{
@@ -158,13 +161,14 @@ export function MobileMenu() {
                 open: { opacity: 0 },
               }}
               transition={{ duration: 0.1 }}
-            />
+              />
             <Path
               variants={{
                 closed: { d: 'M 1.5 20.5 L 21.5 20.5' },
                 open: { d: 'M 2.5 3.5 L 20.5 19.5' },
               }}
-            />
+              />
+              {/* -------------------------------------- */}
           </motion.svg>
         </button>
       </Box>

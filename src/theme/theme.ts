@@ -70,7 +70,8 @@ export const theme: MantineThemeOverride = {
       padding: 0,
       boxSizing: 'border-box',
       background: theme.colors.peach,
-      color: theme.colorScheme === 'dark' ? theme.colors.eerieBlack : theme.colors.offWhite,
+      // color: theme.colorScheme === 'dark' ? theme.colors.eerieBlack : theme.colors.offWhite,
+      color: theme.colors.eerieBlack,
 
       '& #root': {
         height: '100%',

@@ -17,11 +17,9 @@ export function About() {
           <SkullLogo size="115px" />
           <Flex h="100%" direction="column" align="flex-start" justify="center">
             <Title order={1}>
-              SO HERE'S
-              <br />
-              THE DANG STORY
+              HERE'S THE STORY
             </Title>
-            <Title order={4}>and we'll try not to blab</Title>
+            <Title order={4} className={globalClasses.pageSubtitleText}>In case you can't tell by the lorem ipsum junk below, this is in development.</Title>
           </Flex>
         </Flex>
 

@@ -44,16 +44,9 @@ export const useFooterStyles = createStyles((theme, { show = true }: FooterProps
       translate: 0,
       left: 0,
     },
-    [theme.other.mq.shortScreen(575)]: {
+    [theme.other.mq.shortScreen(550)]: {
       position: 'relative',
     },
-    // [theme.other.mq.landscape]: {
-    //   position: 'relative',
-    //   rotate: '0deg',
-    //   bottom: 0,
-    //   translate: 0,
-    //   left: 0,
-    // },
     [theme.other.mq.extraShortScreen]: {
       position: 'relative',
       rotate: '0deg',

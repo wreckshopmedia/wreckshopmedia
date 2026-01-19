@@ -9,9 +9,11 @@ export function Services() {
     <Box id="services">
       <PageHelmet title="Services" description="Learn more services our company" />
       <Box className={cx(globalClasses.page, classes.servicesOuter)}>
-        
-        <Title order={1}>SERVICES PAGE STUFF</Title>
-        <Text component="h3">Huzzah, here is the stuff we does do things ya</Text>
+        <Title order={1}>WUT DO</Title>
+        <Title order={4} className={globalClasses.pageSubtitleText}>
+          A good ol' case of the ADHD creates an intrinsic desire to rule at everything. It sucks
+          sometimes. Other times, it rules.
+        </Title>
         <Text component="p">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo consequuntur voluptate
           accusamus sint, ex quos illo labore sed quia nemo quasi molestiae necessitatibus. Quasi
@@ -53,17 +55,6 @@ export function Services() {
           officiis aspernatur quas fuga! Quisquam, quidem. Quisquam molestias, cumque, aliquid,
           reprehenderit laboriosam magnam expedita corporis officiis aspernatur quas fuga!
         </Text>
-
-        <Text component="p">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem. Quisquam
-          molestias, cumque, aliquid, reprehenderit laboriosam magnam expedita corporis officiis
-          aspernatur quas fuga! Quisquam, quidem. Quisquam molestias, cumque, aliquid, reprehenderit
-          laboriosam magnam expedita corporis officiis aspernatur quas fuga! Quisquam, quidem.
-          Quisquam molestias, cumque, aliquid, reprehenderit laboriosam magnam expedita corporis
-          officiis aspernatur quas fuga! Quisquam, quidem. Quisquam molestias, cumque, aliquid,
-          reprehenderit laboriosam magnam expedita corporis officiis aspernatur quas fuga!
-        </Text>
-      
       </Box>
     </Box>
   );

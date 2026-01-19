@@ -2,10 +2,9 @@ import { createStyles } from '@mantine/styles';
 
 export const useAboutStyles = createStyles((theme) => ({
   aboutOuter: {
-    color: theme.colors.offWhite,
 
    
-
+    
     svg: {
       marginInline: 'unset',
     },
