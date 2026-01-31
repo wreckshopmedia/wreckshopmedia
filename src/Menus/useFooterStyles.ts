@@ -47,13 +47,13 @@ export const useFooterStyles = createStyles((theme, { show = true }: FooterProps
     [theme.other.mq.shortScreen(550)]: {
       position: 'relative',
     },
-    [theme.other.mq.extraShortScreen]: {
-      position: 'relative',
-      rotate: '0deg',
-      bottom: 0,
-      translate: 0,
-      left: 0,
-    },
+    // [theme.other.mq.extraShortScreen]: {
+    //   position: 'relative',
+    //   rotate: '0deg',
+    //   bottom: 0,
+    //   translate: 0,
+    //   left: 0,
+    // },
 
     // ------- COMBO! - UNDOCK AND GO TO TRADITIONAL FOOTER MODE! -------- //
     [theme.other.mq.iPhone15ProMax]: {

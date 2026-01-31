@@ -11,8 +11,8 @@ export function Services() {
       <Box className={cx(globalClasses.page, classes.servicesOuter)}>
         <Title order={1}>WUT DO</Title>
         <Title order={4} className={globalClasses.pageSubtitleText}>
-          A good ol' case of the ADHD creates an intrinsic desire to rule at everything. It sucks
-          sometimes. Other times, it rules.
+          A good ol' case of the ADHD creates an intrinsic desire to rule at everything. It doesn't
+          always suck.
         </Title>
         <Text component="p">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo consequuntur voluptate
