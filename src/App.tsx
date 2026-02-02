@@ -6,7 +6,7 @@ import { MantineProvider } from '@mantine/styles';
 import { Layout, Intro, Home, About, Services, Projects, Contact } from '.';
 
 function App() {
-  const colorScheme = useColorScheme();
+  const colorScheme = useColorScheme()
 
   return (
     <HelmetProvider>

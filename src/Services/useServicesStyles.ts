@@ -1,6 +1,6 @@
 import { createStyles } from '@mantine/styles';
 
-export const useServicesStyles = createStyles((theme) => ({
+export const useServicesStyles = createStyles(() => ({
   servicesOuter: {
 
     

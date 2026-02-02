@@ -6,7 +6,8 @@ export const useFooterStyles = createStyles((theme, { show = true }: FooterProps
     transform: show ? 'translateY(0)' : 'translateY(calc(7dvh + 7dvw))',
     transition: 'all 250ms ease-out, transform 300ms ease-out',
     background: theme.colors.eerieBlack,
-    width: '100dvw',
+    height: '60px',
+    width: '10dvw',
     left: '50%',
     translate: '-50% 0',
     bottom: '5px',
@@ -47,13 +48,6 @@ export const useFooterStyles = createStyles((theme, { show = true }: FooterProps
     [theme.other.mq.shortScreen(550)]: {
       position: 'relative',
     },
-    // [theme.other.mq.extraShortScreen]: {
-    //   position: 'relative',
-    //   rotate: '0deg',
-    //   bottom: 0,
-    //   translate: 0,
-    //   left: 0,
-    // },
 
     // ------- COMBO! - UNDOCK AND GO TO TRADITIONAL FOOTER MODE! -------- //
     [theme.other.mq.iPhone15ProMax]: {
@@ -86,7 +80,7 @@ export const useFooterStyles = createStyles((theme, { show = true }: FooterProps
     alignItems: 'center',
     justifyContent: 'flex-start',
     paddingLeft: 'max(6vw, calc(-1200px + 100vw) / 2)',
-    [theme.other.mq.sm]: {
+    [theme.other.mq.tabletPortrait]: {
       paddingLeft: 'calc(3vw + 2rem)',
     },
     [theme.other.mq.customMax(550)]: {
